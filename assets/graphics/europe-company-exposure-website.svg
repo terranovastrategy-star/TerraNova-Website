@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="388.8pt" height="604.8pt" viewBox="0 0 388.8 604.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-14T20:08:32.013450</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.6, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 604.8 
+L 388.8 604.8 
+L 388.8 0 
+L 0 0 
+L 0 604.8 
+z
+" style="fill: none; opacity: 0"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 246.519883 92.682285 
+C 238.56702 88.310162 230.095529 84.956062 221.305218 82.699093 
+C 212.514907 80.442125 203.475433 79.300174 194.4 79.300174 
+L 194.4 120.411548 
+C 200.026768 120.411548 205.631242 121.119558 211.081235 122.518878 
+C 216.531228 123.918198 221.783553 125.997741 226.714327 128.708457 
+z
+" clip-path="url(#pe893750a04)" style="fill: #e5e5e2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 194.4 79.300174 
+C 181.335861 79.300174 168.379096 81.666499 156.158325 86.284344 
+C 143.937554 90.902188 132.653662 97.695644 122.854107 106.335114 
+C 113.054551 114.974584 104.900418 125.318053 98.787318 136.863691 
+C 92.674217 148.409328 88.702638 160.967345 87.065267 173.92847 
+C 85.427896 186.889595 86.151649 200.04077 89.201412 212.743946 
+C 92.251175 225.447122 97.576815 237.493483 104.919951 248.298579 
+C 112.263086 259.103674 121.50301 268.489891 132.191432 276.001839 
+C 142.879854 283.513788 154.841076 289.027987 167.494782 292.276907 
+C 180.148487 295.525826 193.286672 296.456059 206.271917 295.022475 
+C 219.257161 293.588891 231.876012 289.815054 243.516245 283.884059 
+C 255.156479 277.953064 265.626751 269.962404 274.41908 260.299761 
+C 283.211409 250.637117 290.181266 239.461325 294.990497 227.314595 
+C 299.799727 215.167866 302.369277 202.249868 302.574479 189.187341 
+C 302.779682 176.124813 300.617164 163.132478 296.191845 150.840681 
+C 291.766526 138.548883 285.151148 127.159677 276.666668 117.225627 
+C 268.182189 107.291578 257.968075 98.975982 246.519883 92.682285 
+L 226.714327 128.708457 
+C 233.812207 132.610549 240.144957 137.766218 245.405334 143.925329 
+C 250.665712 150.08444 254.767246 157.145748 257.510944 164.766662 
+C 260.254642 172.387576 261.595403 180.442824 261.468177 188.541591 
+C 261.340952 196.640358 259.747831 204.649517 256.766108 212.180489 
+C 253.784385 219.711461 249.463074 226.640453 244.01183 232.631292 
+C 238.560586 238.622131 232.069017 243.57634 224.852072 247.253557 
+C 217.635127 250.930773 209.81144 253.270552 201.760588 254.159374 
+C 193.709737 255.048197 185.564062 254.471452 177.718765 252.457122 
+C 169.873467 250.442792 162.457509 247.023989 155.830688 242.36658 
+C 149.203866 237.709172 143.475113 231.889718 138.922369 225.190559 
+C 134.369625 218.491399 131.067728 211.022656 129.176876 203.146687 
+C 127.286023 195.270718 126.837296 187.116989 127.852466 179.081091 
+C 128.867636 171.045194 131.330015 163.259223 135.120137 156.100928 
+C 138.910259 148.942633 143.965822 142.529682 150.041546 137.173211 
+C 156.117271 131.816739 163.113283 127.604797 170.690162 124.741733 
+C 178.26704 121.87867 186.300234 120.411548 194.4 120.411548 
+z
+" clip-path="url(#pe893750a04)" style="fill: #af2832"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 36px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="194.4" y="190.182355" transform="rotate(-0 194.4 190.182355)">92</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 13.68px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="194.4" y="221.271129" transform="rotate(-0 194.4 221.271129)">%</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_4">
+    <path d="M 63.133554 486.519572 
+C 69.640423 488.633782 76.528997 489.312248 83.323301 488.508089 
+C 90.117604 487.70393 96.657461 485.436105 102.490993 481.861313 
+C 108.324524 478.28652 113.314204 473.489035 117.115264 467.800347 
+C 120.916324 462.111659 123.439154 455.665878 124.509436 448.908383 
+C 125.579718 442.150889 125.17222 435.24099 123.315099 428.656133 
+C 121.457977 422.071277 118.195014 415.966702 113.751667 410.764212 
+C 109.308321 405.561722 103.789343 401.383965 97.576076 398.519609 
+C 91.362808 395.655254 84.601727 394.171826 77.76 394.171826 
+L 77.76 414.051339 
+C 81.728202 414.051339 85.649628 414.911727 89.253324 416.573053 
+C 92.857019 418.23438 96.058026 420.657479 98.635167 423.674923 
+C 101.212308 426.692367 103.104827 430.233021 104.181957 434.052237 
+C 105.259088 437.871454 105.495437 441.879196 104.874673 445.798542 
+C 104.25391 449.717889 102.790668 453.456442 100.586053 456.755881 
+C 98.381438 460.05532 95.487424 462.837862 92.103976 464.911241 
+C 88.720528 466.984621 84.92741 468.299959 80.986714 468.766372 
+C 77.046018 469.232784 73.050645 468.839274 69.276661 467.613032 
+z
+" clip-path="url(#p799fca0624)" style="fill: #e5e5e2"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 77.76 394.171826 
+C 66.492881 394.171826 55.587797 398.194924 47.020212 405.512333 
+C 38.452627 412.829741 32.773129 422.971214 31.010564 434.099617 
+C 29.247998 445.228019 31.515634 456.628194 37.402687 466.234993 
+C 43.289741 475.841791 52.417887 483.037841 63.133554 486.519572 
+L 69.276661 467.613032 
+C 63.061574 465.593628 57.76725 461.419919 54.352759 455.847976 
+C 50.938268 450.276033 49.623039 443.663931 50.645327 437.209458 
+C 51.667615 430.754984 54.961724 424.87293 59.930923 420.628833 
+C 64.900122 416.384736 71.225071 414.051339 77.76 414.051339 
+z
+" clip-path="url(#p799fca0624)" style="fill: #af2832"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="77.76" y="442.74657" transform="rotate(-0 77.76 442.74657)">45</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 6.08px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="77.76" y="456.308359" transform="rotate(-0 77.76 456.308359)">%</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_6">
+    <path d="M 239.415572 456.130446 
+C 241.723665 449.026867 242.317868 441.476805 241.149436 434.099617 
+C 239.981005 426.722429 237.082787 419.725512 232.692533 413.682846 
+C 228.30228 407.640181 222.543415 402.721645 215.888357 399.330724 
+C 209.2333 395.939803 201.869145 394.171826 194.4 394.171826 
+L 194.4 414.051339 
+C 198.732104 414.051339 203.003314 415.076766 206.863247 417.0435 
+C 210.72318 419.010234 214.063322 421.862985 216.609669 425.367731 
+C 219.156016 428.872477 220.836983 432.930689 221.514673 437.209458 
+C 222.192363 441.488227 221.847726 445.867263 220.509032 449.987339 
+z
+" clip-path="url(#p51ca2b05cb)" style="fill: #e5e5e2"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 194.4 394.171826 
+C 185.67168 394.171826 177.111123 396.586153 169.669007 401.146687 
+C 162.226891 405.707222 156.189298 412.238653 152.226724 420.015643 
+C 148.26415 427.792632 146.528919 436.516227 147.213735 445.21764 
+C 147.898551 453.919053 150.977089 462.263795 156.107467 469.325154 
+C 161.237844 476.386513 168.222845 481.893043 176.286761 485.233227 
+C 184.350677 488.57341 193.183524 489.618846 201.804383 488.253436 
+C 210.425243 486.888026 218.502722 483.164257 225.139788 477.495667 
+C 231.776854 471.827077 236.718373 464.431571 239.415572 456.130446 
+L 220.509032 449.987339 
+C 218.944657 454.801991 216.078575 459.091385 212.229077 462.379167 
+C 208.379579 465.666949 203.694641 467.826735 198.694542 468.618673 
+C 193.694444 469.410611 188.571393 468.804258 183.894322 466.866951 
+C 179.21725 464.929645 175.16595 461.735857 172.190331 457.640269 
+C 169.214712 453.544681 167.42916 448.704731 167.031967 443.657911 
+C 166.634773 438.611091 167.641207 433.551407 169.9395 429.040753 
+C 172.237793 424.530099 175.739597 420.741869 180.056024 418.096759 
+C 184.372451 415.451649 189.337575 414.051339 194.4 414.051339 
+z
+" clip-path="url(#p51ca2b05cb)" style="fill: #af2832"/>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="194.4" y="442.74657" transform="rotate(-0 194.4 442.74657)">70</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.08px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="194.4" y="456.308359" transform="rotate(-0 194.4 456.308359)">%</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_8">
+    <path d="M 296.413554 486.519572 
+C 302.920423 488.633782 309.808997 489.312248 316.603301 488.508089 
+C 323.397604 487.70393 329.937461 485.436105 335.770993 481.861313 
+C 341.604524 478.28652 346.594204 473.489035 350.395264 467.800347 
+C 354.196324 462.111659 356.719154 455.665878 357.789436 448.908383 
+C 358.859718 442.150889 358.45222 435.24099 356.595099 428.656133 
+C 354.737977 422.071277 351.475014 415.966702 347.031667 410.764212 
+C 342.588321 405.561722 337.069343 401.383965 330.856076 398.519609 
+C 324.642808 395.655254 317.881727 394.171826 311.04 394.171826 
+L 311.04 414.051339 
+C 315.008202 414.051339 318.929628 414.911727 322.533324 416.573053 
+C 326.137019 418.23438 329.338026 420.657479 331.915167 423.674923 
+C 334.492308 426.692367 336.384827 430.233021 337.461957 434.052237 
+C 338.539088 437.871454 338.775437 441.879196 338.154673 445.798542 
+C 337.53391 449.717889 336.070668 453.456442 333.866053 456.755881 
+C 331.661438 460.05532 328.767424 462.837862 325.383976 464.911241 
+C 322.000528 466.984621 318.20741 468.299959 314.266714 468.766372 
+C 310.326018 469.232784 306.330645 468.839274 302.556661 467.613032 
+z
+" clip-path="url(#p6afe7b2e58)" style="fill: #e5e5e2"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 311.04 394.171826 
+C 299.772881 394.171826 288.867797 398.194924 280.300212 405.512333 
+C 271.732627 412.829741 266.053129 422.971214 264.290564 434.099617 
+C 262.527998 445.228019 264.795634 456.628194 270.682687 466.234993 
+C 276.569741 475.841791 285.697887 483.037841 296.413554 486.519572 
+L 302.556661 467.613032 
+C 296.341574 465.593628 291.04725 461.419919 287.632759 455.847976 
+C 284.218268 450.276033 282.903039 443.663931 283.925327 437.209458 
+C 284.947615 430.754984 288.241724 424.87293 293.210923 420.628833 
+C 298.180122 416.384736 304.505071 414.051339 311.04 414.051339 
+z
+" clip-path="url(#p6afe7b2e58)" style="fill: #af2832"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 16px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="311.04" y="442.74657" transform="rotate(-0 311.04 442.74657)">45</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.08px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #af2832" x="311.04" y="456.308359" transform="rotate(-0 311.04 456.308359)">%</text>
+   </g>
+  </g>
+  <g id="text_9">
+   <text style="font-weight: 700; font-size: 13px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #202220" x="31.104" y="27.216" transform="rotate(-0 31.104 27.216)">Companies highly exposed by 2050</text>
+  </g>
+  <g id="text_10">
+   <text style="font-size: 8.5px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #666866" x="31.104" y="45.36" transform="rotate(-0 31.104 45.36)">Share of firms whose operations sit in high physical-risk conditions.</text>
+  </g>
+  <g id="text_11">
+   <text style="font-weight: 700; font-size: 10.5px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #202220" x="194.4" y="329.616" transform="rotate(-0 194.4 329.616)">All large companies</text>
+  </g>
+  <g id="text_12">
+   <text style="font-size: 7.8px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #666866" x="194.4" y="343.5264" transform="rotate(-0 194.4 343.5264)">At least one highly exposed asset by 2050</text>
+  </g>
+  <g id="text_13">
+   <text style="font-weight: 700; font-size: 7.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #202220" x="77.76" y="529.2" transform="rotate(-0 77.76 529.2)">Manufacturing &amp; logistics</text>
+  </g>
+  <g id="text_14">
+   <text style="font-size: 6.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #666866" x="77.76" y="541.296" transform="rotate(-0 77.76 541.296)">Operations in high-risk locations</text>
+  </g>
+  <g id="text_15">
+   <text style="font-weight: 700; font-size: 7.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #202220" x="194.4" y="529.2" transform="rotate(-0 194.4 529.2)">Agriculture &amp; energy</text>
+  </g>
+  <g id="text_16">
+   <text style="font-size: 6.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #666866" x="194.4" y="541.296" transform="rotate(-0 194.4 541.296)">Natural-resource operations</text>
+  </g>
+  <g id="text_17">
+   <text style="font-weight: 700; font-size: 7.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #202220" x="311.04" y="529.2" transform="rotate(-0 311.04 529.2)">Tourism &amp; services</text>
+  </g>
+  <g id="text_18">
+   <text style="font-size: 6.2px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; text-anchor: middle; fill: #666866" x="311.04" y="541.296" transform="rotate(-0 311.04 541.296)">Operations in high-risk locations</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 6.4px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; fill: #666866" transform="translate(31.104 564.2835)">92%: S&amp;P Global Sustainable1 (2022), S&amp;P Global 1200, asset exposure score &gt;75 by the 2050s.</text>
+   <text style="font-size: 6.4px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; fill: #666866" transform="translate(31.104 572.2776)">70%: same source, Energy / Utilities / Materials with risk ≥20% of asset value (BAU).</text>
+   <text style="font-size: 6.4px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; fill: #666866" transform="translate(31.104 580.1799)">45%: ESRB/ECB (2021), euro-area exposures in high or increasing physical-risk areas</text>
+   <text style="font-size: 6.4px; font-family: 'Segoe UI', 'Calibri', 'Arial', 'DejaVu Sans', sans-serif; fill: #666866" transform="translate(31.104 588.174)">(manufacturing 40–44%, transport &amp; storage ~45%, accommodation &amp; food ~45%).</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe893750a04">
+   <rect x="69.984" y="63.072" width="248.832" height="248.832"/>
+  </clipPath>
+  <clipPath id="p799fca0624">
+   <rect x="23.328" y="387.072" width="108.864" height="108.864"/>
+  </clipPath>
+  <clipPath id="p51ca2b05cb">
+   <rect x="139.968" y="387.072" width="108.864" height="108.864"/>
+  </clipPath>
+  <clipPath id="p6afe7b2e58">
+   <rect x="256.608" y="387.072" width="108.864" height="108.864"/>
+  </clipPath>
+ </defs>
+</svg>

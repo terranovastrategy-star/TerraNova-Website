@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+  STUDY ARTICLE TEMPLATE
+  ======================
+  1. Copy this file and rename it to your slug, e.g. studies/flood-exposure.html
+  2. Replace everything marked [ ... ] below
+  3. Put images in assets/images/studies/<your-slug>/
+  4. Add the matching entry to js/studies.js so the study appears in the listings
+  5. Leave the footer placeholder as-is. Edit includes/footer.html to change the footer site-wide.
+
+  Sections marked OPTIONAL can be deleted entirely if you have no content
+  for them — the page still reads as complete without them.
+
+  Do not change the paths: this file lives in /studies/, so every link to the
+  rest of the site starts with ../
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Study title] — Terranova Strategy</title>
+  <meta name="description" content="[One sentence describing the study, ~150 characters.]">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=90">
+</head>
+<body data-root="../">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">Terranova Strategy</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="../about.html">About</a>
+        <div class="nav-dropdown">
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-haspopup="true">
+            Services
+            <svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+          <div class="nav-dropdown__panel">
+            <a href="../exposure-assessment.html">Territorial Exposure Assessment</a>
+            <a href="../disruption-response.html">Operational Disruption Response</a>
+            <a href="../territorial-recovery.html">Strategic Territorial Recovery</a>
+          </div>
+        </div>
+        <a href="../studies.html" class="is-active">Studies</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <button type="button" class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="../about.html">About</a>
+    <span class="mobile-nav__label">Services</span>
+    <div class="mobile-sub">
+      <a href="../exposure-assessment.html">Territorial Exposure Assessment</a>
+      <a href="../disruption-response.html">Operational Disruption Response</a>
+      <a href="../territorial-recovery.html">Strategic Territorial Recovery</a>
+    </div>
+    <a href="../studies.html">Studies</a>
+    <a href="../contact.html">Contact</a>
+  </nav>
+
+  <!-- data-study-id must match the id in js/studies.js -->
+  <main id="main" class="study-article" data-study-id="[your-slug]">
+
+    <!-- HEADER — title and facts come first, image below ----------------- -->
+    <header class="study-header">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / <a href="../studies.html">Insights &amp; Studies</a> / [Short name]</p>
+        <div class="study-header__grid">
+          <div class="study-header__main">
+            <h1>[A short, striking headline — or use the formal study title from js/studies.js.]</h1>
+            <p class="study-lead">[One short sentence — same as the excerpt in js/studies.js.]</p>
+          </div>
+          <aside class="study-meta">
+            <div>
+              <p class="study-meta__label">Client</p>
+              <p class="study-meta__value">[Client name or organisation]</p>
+            </div>
+            <div>
+              <p class="study-meta__label">Year</p>
+              <p class="study-meta__value">[2026]</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <!-- COVER — framed, not full-bleed ----------------------------------- -->
+    <figure class="study-cover reveal-clip">
+      <img src="../assets/images/studies/[your-slug]/cover.jpg" alt="[Describe the image]">
+      <figcaption>[Caption explaining what the image shows. Delete this line if not needed.]</figcaption>
+    </figure>
+
+    <!-- SECTION INDEX — highlights the section you are reading ----------- -->
+    <nav class="study-index" aria-label="On this page">
+      <div class="container study-index__inner">
+        <a href="#situation"><span>01</span> The situation</a>
+        <a href="#question"><span>02</span> The question</a>
+        <a href="#approach"><span>03</span> What we did</a>
+        <a href="#delivered"><span>04</span> What was delivered</a>
+      </div>
+    </nav>
+
+    <!-- 01 THE SITUATION ------------------------------------------------ -->
+    <section class="study-section" id="situation">
+      <div class="container study-section__grid">
+        <div class="study-section__aside reveal">
+          <p class="study-section__number">01</p>
+          <p class="study-section__label">The situation</p>
+        </div>
+        <div class="study-section__body reveal reveal-delay-1">
+          <h2>[What was happening in the territory?]</h2>
+          <p class="study-standfirst">[Opening paragraph, set slightly larger. Set the scene: what happened, or what conditions were present.]</p>
+          <p>[A second paragraph. Keep it concrete — places, systems, consequences.]</p>
+
+          <!-- OPTIONAL — three quick facts. Delete the whole block if unused. -->
+          <div class="study-callout">
+            <p class="study-callout__label">At a glance</p>
+            <ul>
+              <li>[Short fact]</li>
+              <li>[Short fact]</li>
+              <li>[Short fact]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 THE QUESTION — full-width dark statement ---------------------- -->
+    <section class="study-statement" id="question">
+      <div class="container reveal">
+        <p class="study-statement__label">02 — The question</p>
+        <p class="study-statement__text">[The actual decision the client faced, phrased as they would ask it.]</p>
+        <p class="study-statement__note">[Why the answer was not obvious with the information they already had.]</p>
+      </div>
+    </section>
+
+    <!-- 03 WHAT WE DID --------------------------------------------------- -->
+    <section class="study-section study-section--alt" id="approach">
+      <div class="container">
+        <div class="study-section__grid study-section__grid--media">
+          <div class="study-section__aside reveal">
+            <p class="study-section__number">03</p>
+            <p class="study-section__label">What we did</p>
+          </div>
+          <div class="study-section__content">
+            <div class="study-section__body reveal reveal-delay-1">
+              <h2>[One line describing the method.]</h2>
+              <p class="study-standfirst">[How long it took and what it combined.]</p>
+            </div>
+
+            <!-- OPTIONAL — supporting image on the right. Delete if unused. -->
+            <figure class="study-figure study-figure--aside reveal reveal-delay-2">
+              <img src="../assets/images/studies/[your-slug]/approach.jpg" alt="[Describe the image]">
+              <figcaption>[Caption.]</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ol class="study-process">
+          <li class="reveal">
+            <span class="study-process__number">01</span>
+            <h3>[Stage name]</h3>
+            <p>[What this stage involved.]</p>
+          </li>
+          <li class="reveal reveal-delay-1">
+            <span class="study-process__number">02</span>
+            <h3>[Stage name]</h3>
+            <p>[What this stage involved.]</p>
+          </li>
+          <li class="reveal reveal-delay-2">
+            <span class="study-process__number">03</span>
+            <h3>[Stage name]</h3>
+            <p>[What this stage involved.]</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 04 WHAT WAS DELIVERED ------------------------------------------- -->
+    <section class="study-section" id="delivered">
+      <div class="container">
+        <div class="study-section__grid">
+          <div class="study-section__aside reveal">
+            <p class="study-section__number">04</p>
+            <p class="study-section__label">What was delivered</p>
+          </div>
+          <div class="study-section__body reveal reveal-delay-1">
+            <h2>[What the client walked away with.]</h2>
+            <p class="study-standfirst">[One line framing the deliverables.]</p>
+          </div>
+        </div>
+
+        <div class="study-deliverables">
+          <article class="study-deliverable reveal">
+            <span>01</span>
+            <h3>[Deliverable]</h3>
+            <p>[What it contained and what it let them decide.]</p>
+          </article>
+          <article class="study-deliverable reveal reveal-delay-1">
+            <span>02</span>
+            <h3>[Deliverable]</h3>
+            <p>[What it contained and what it let them decide.]</p>
+          </article>
+          <article class="study-deliverable reveal reveal-delay-2">
+            <span>03</span>
+            <h3>[Deliverable]</h3>
+            <p>[What it contained and what it let them decide.]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL — KEY FIGURES. Delete this section if not relevant. ----- -->
+    <section class="study-figures">
+      <div class="container">
+        <div class="stat-strip reveal">
+          <div class="stat">
+            <p class="stat__value"><span data-count="0">0</span></p>
+            <p class="stat__label">[What this number counts]</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value"><span data-count="0">0</span><span class="stat__suffix">+</span></p>
+            <p class="stat__label">[What this number counts]</p>
+          </div>
+          <div class="stat">
+            <p class="stat__value"><span data-count="0">0</span><span class="stat__suffix">km</span></p>
+            <p class="stat__label">[What this number counts]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL — QUOTE. Delete this section if you have no quote. ------ -->
+    <section class="study-quote">
+      <div class="container reveal">
+        <blockquote>[A short quote from the client or the project lead.]</blockquote>
+        <cite>[Role, organisation]</cite>
+      </div>
+    </section>
+
+    <!-- RELATED STUDIES — filled automatically from js/studies.js -------- -->
+    <section class="study-related">
+      <div class="container">
+        <div class="study-related__head reveal">
+          <h2>Related studies</h2>
+          <a href="../studies.html" class="study-related__all">View all studies</a>
+        </div>
+        <div class="study-related__grid" data-studies-related></div>
+      </div>
+    </section>
+
+    <!-- CTA ------------------------------------------------------------- -->
+    <section class="service-final-cta">
+      <div class="container service-final-cta__inner reveal">
+        <div>
+          <p class="service-kicker">Facing a similar situation?</p>
+          <h2>[A closing question aimed at the reader.]</h2>
+        </div>
+        <a class="button-cta" href="../contact.html">
+          Start a conversation
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared footer: edit includes/footer.html -->
+  <footer class="site-footer" data-include="footer"></footer>
+
+
+  <script src="../js/studies.js?v=6"></script>
+  <script src="../js/main.js?v=18"></script>
+</body>
+</html>

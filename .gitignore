@@ -1,0 +1,32 @@
+# Runtime / local
+*.log
+server.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Internal sales and planning materials, not the live site
+presentation/
+docs/
+*.pptx
+*.potx
+*.docx
+
+# Browser "Save Page As" copies
+assets/images/*.htm
+assets/images/*_files/
+
+# Stray unused downloads
+nepal-2-gty-gmh-260826_1787774015525_hpMain.avif
+assets/images/G5kTW5fdU9E8j9KQMnDYYnD7nybEMY0db491A8M57OIbYdPL03dfhf6J7NynIVUe2DZTvoMxYkx1hwJF4uVoO7uJ56m8IoJGn2NvYxoOzBCqQxKfvQCeWWQVcG9WVUOZqZXCt_-1teKS_T_CfTZEBO6S_e8yDLq7zOMtqpZ7HK1l7smoXgOIAQO1XRMDPF2w.jpg
