@@ -63,7 +63,7 @@
     var mount = document.querySelector("[data-include='footer']");
     if (!mount) return;
 
-    fetch(withRoot("includes/footer.html?v=2"))
+    fetch(withRoot("includes/footer.html?v=5"))
       .then(function (response) {
         if (!response.ok) throw new Error("Footer include failed");
         return response.text();

@@ -1,0 +1,20 @@
+# Terranova Strategy
+
+Terranova Strategy is a territorial strategy consultancy. It helps businesses and public organisations understand territorial exposure, navigate disruption, build resilience, recover after major disruption, and support long-term territorial development.
+
+The commercial offer is three services. Related fields (climate resilience, territorial risk, physical climate risk, supply chain resilience, operational resilience, infrastructure resilience, business continuity, strategic recovery, reconstruction, territorial development, regional development, sustainability) are areas of expertise connected to those services — not separate products.
+
+## Pages
+
+- [Home](index.html)
+- [About](about.html) — mission, vision, connected fields, and how the three services sit in that work
+- [Territorial Exposure Assessment](exposure-assessment.html) — before disruption: map dependencies, score exposure (TEAM), grade action
+- [Operational Disruption Response](disruption-response.html) — during the event: reactivation timeframes, government and company tracks, capital this week
+- [Strategic Territorial Recovery](territorial-recovery.html) — after emergency works: reconstruction sequence and element action plan
+- [Insights](insights.html) — research and perspectives on territorial intelligence, risk, resilience and recovery
+- [Contact](contact.html)
+
+## Location
+
+Güterstrasse 144, 4053 Basel, Switzerland
+contact@terranovastrategy.com
