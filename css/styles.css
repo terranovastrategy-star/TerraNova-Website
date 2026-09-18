@@ -8372,6 +8372,11 @@ body:has(.offer-page) .site-header {
   max-height: min(32rem, 42vw);
 }
 
+.ed-figure img[src*="graphics/"] {
+  object-fit: contain;
+  background: var(--color-white);
+}
+
 .ed-caption {
   margin-top: 0.55rem;
   font-size: 0.78rem;

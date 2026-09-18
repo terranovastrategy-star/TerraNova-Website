@@ -19,6 +19,7 @@ venv/
 # Internal sales and planning materials, not the live site
 presentation/
 docs/
+clients/
 *.pptx
 *.potx
 *.docx
