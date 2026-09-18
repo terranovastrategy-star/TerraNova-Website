@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 22" fill="none" role="img" aria-label="Terranova Strategy">
+  <title>Terranova Strategy</title>
+<g transform="translate(0 0.25)">
+    <path d="M4.8 10.2 A8.2 8.2 0 0 1 21.2 10.2" fill="none" stroke="#FFFFFF" stroke-width="1.05" stroke-linecap="round"/>
+    <path d="M2.8 16.4 13 3.8 23.2 16.4" fill="none" stroke="#FFFFFF" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6.6 16.4 13 8.2 19.4 16.4" fill="none" stroke="#FFFFFF" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M9.8 16.4 13 11.8 16.2 16.4" fill="none" stroke="#FFFFFF" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M13 17.55 11.2 19.95 14.8 19.95Z" fill="#AF2832"/>
+  </g>
+<text x="36" y="15.9" font-family="Inter, Segoe UI, Calibri, Arial, sans-serif" font-size="11.5" font-weight="300" fill="#FFFFFF" letter-spacing="0.28em">TERRANOVA</text>
+  <text x="158" y="15.9" font-family="Inter, Segoe UI, Calibri, Arial, sans-serif" font-size="9.5" font-weight="300" fill="#FFFFFF" opacity="0.68" letter-spacing="0.14em">Strategy</text>
+</svg>

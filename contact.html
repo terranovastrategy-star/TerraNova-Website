@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — Terranova Strategy</title>
+  <link rel="icon" href="assets/brand/favicon.ico?v=2" sizes="48x48">
+  <link rel="icon" href="assets/brand/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png?v=2">
+  <title>Contact the team — Terranova Strategy</title>
   <meta name="description" content="Contact Terranova Strategy to discuss Territorial Exposure Assessment, Operational Disruption Response, or Strategic Territorial Recovery.">
   <link rel="canonical" href="contact.html">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_GB">
   <meta property="og:site_name" content="Terranova Strategy">
-  <meta property="og:title" content="Contact — Terranova Strategy">
+  <meta property="og:title" content="Contact the team — Terranova Strategy">
   <meta property="og:description" content="Discuss territorial exposure, disruption response, or recovery planning with Terranova Strategy.">
   <meta property="og:url" content="contact.html">
-  <meta property="og:image" content="assets/images/Strategy%20operations%20meeting.jpg">
+  <meta property="og:image" content="assets/images/Territorial%20strategy%20switzerland.jpg">
   <meta name="twitter:card" content="summary">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=114">
+  <link rel="stylesheet" href="css/styles.css?v=119">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo">Terranova Strategy</a>
+            <a href="index.html" class="logo" aria-label="Terranova Strategy home">
+        <img class="logo__img logo__img--dark" src="assets/brand/terranova-logo.svg?v=2" alt="Terranova Strategy" width="214" height="22" decoding="async">
+        <img class="logo__img logo__img--light" src="assets/brand/terranova-logo-light.svg?v=2" alt="" width="214" height="22" decoding="async" aria-hidden="true">
+      </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="about.html">About</a>
         <div class="nav-dropdown">
@@ -61,65 +67,135 @@
   </nav>
 
   <main id="main">
-    <section class="page-hero">
-      <div class="container reveal">
-        <span class="accent-line" aria-hidden="true"></span>
-        <h1>Contact</h1>
-        <p>Discuss your territorial exposure, disruption response, or recovery planning needs with our team.</p>
-      </div>
-    </section>
-
-    <section class="page-content">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="reveal">
-            <div class="content-block">
-              <h2>Get in touch</h2>
-              <p>Whether you are assessing risk before disruption or responding to an event in progress, we are here to help you make informed territorial decisions.</p>
-            </div>
-            <div class="content-block">
-              <p><strong>Email</strong><br>contact@terranovastrategy.com <em>(placeholder)</em></p>
-            </div>
+    <section class="contact-stage" aria-labelledby="contact-heading">
+      <div class="contact-stage__board">
+        <div class="contact-stage__visual reveal">
+          <img
+            src="assets/images/Territorial%20strategy%20switzerland.jpg"
+            alt="Alpine valley, settlement and transport corridors in Switzerland"
+            width="1920"
+            height="1280"
+            decoding="async"
+          >
+          <div class="contact-stage__copy">
+            <h1 id="contact-heading">Contact the team</h1>
+            <p>Whether you are assessing territorial exposure before disruption, or need a path after an event, we can help you take a clear decision.</p>
           </div>
+        </div>
 
-          <form class="form-placeholder reveal reveal-delay-1" aria-label="Contact form placeholder">
-            <div class="field-group">
-              <input class="field" type="text" id="name" name="name" placeholder=" ">
-              <label for="name">Name</label>
+        <div class="contact-stage__panel reveal reveal-delay-1">
+          <form class="contact-form" id="contact-form" aria-label="Contact form" novalidate>
+            <h2>Contact us</h2>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="contact-first">First name <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input class="field" type="text" id="contact-first" name="first_name" autocomplete="given-name" required>
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-last">Last name <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input class="field" type="text" id="contact-last" name="last_name" autocomplete="family-name" required>
+              </div>
             </div>
 
-            <div class="field-group">
-              <input class="field" type="text" id="organisation" name="organisation" placeholder=" ">
-              <label for="organisation">Organisation</label>
+            <div class="contact-form__field">
+              <label for="contact-email">Work email <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <input class="field" type="email" id="contact-email" name="email" autocomplete="email" required>
             </div>
 
-            <div class="field-group field-group--static">
-              <select class="field" id="sector" name="sector">
-                <option value="">Select…</option>
-                <option value="private">Private business</option>
-                <option value="public">Public organisation</option>
-              </select>
-              <label for="sector">Sector</label>
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="contact-phone">Phone</label>
+                <input class="field" type="tel" id="contact-phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-role">Role</label>
+                <input class="field" type="text" id="contact-role" name="role" autocomplete="organization-title">
+              </div>
             </div>
 
-            <div class="field-group field-group--static">
-              <select class="field" id="service" name="service">
+            <div class="contact-form__field">
+              <label for="contact-organisation">Organisation <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <input class="field" type="text" id="contact-organisation" name="organisation" autocomplete="organization" required>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="contact-country">Country</label>
+                <input class="field" type="text" id="contact-country" name="country" autocomplete="country-name">
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-sector">Organisation type</label>
+                <select class="field" id="contact-sector" name="sector">
+                  <option value="">Select…</option>
+                  <option value="private">Private business</option>
+                  <option value="public">Public organisation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-form__field">
+              <label for="contact-topic">Topic <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <select class="field" id="contact-topic" name="topic" required>
                 <option value="">Select…</option>
                 <option value="exposure">Territorial Exposure Assessment</option>
                 <option value="response">Operational Disruption Response</option>
                 <option value="recovery">Strategic Territorial Recovery</option>
+                <option value="general">General enquiry</option>
               </select>
-              <label for="service">Service of interest</label>
             </div>
 
-            <div class="field-group">
-              <textarea class="field" id="message" name="message" placeholder=" "></textarea>
-              <label for="message">Message</label>
+            <div class="contact-form__field">
+              <label for="contact-message">How can we help?</label>
+              <textarea class="field" id="contact-message" name="message" rows="4"></textarea>
             </div>
 
-            <button type="button" class="btn-submit" disabled>Submit — coming soon</button>
+            <label class="contact-form__consent">
+              <input type="checkbox" id="contact-privacy" name="privacy" required>
+              <span>I have read the <a href="#">Privacy Policy</a>. <span class="contact-form__req" aria-hidden="true">*</span></span>
+            </label>
+
+            <button type="button" class="contact-form__submit" disabled>Submit</button>
             <p class="form-note">Form delivery is not connected yet. Placeholder only.</p>
           </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-follow">
+      <div class="contact-follow__inner reveal">
+        <h2>From anticipating exposure to navigating disruption and shaping recovery, we help organisations make clear territorial decisions.</h2>
+        <p>Get in touch today.</p>
+      </div>
+    </section>
+
+    <section class="contact-office" aria-labelledby="contact-office-heading">
+      <div class="contact-office__inner">
+        <h2 id="contact-office-heading">Office</h2>
+        <div class="contact-office__grid">
+          <div class="reveal">
+            <h3>Basel</h3>
+            <address>
+              Güterstrasse 144<br>
+              4053 Basel<br>
+              Switzerland
+            </address>
+          </div>
+          <div class="reveal reveal-delay-1">
+            <h3>Direct</h3>
+            <p>
+              <a href="mailto:contact@terranovastrategy.com">contact@terranovastrategy.com</a><br>
+              <a href="tel:+41610000000">+41 61 000 00 00</a>
+            </p>
+          </div>
+          <div class="reveal reveal-delay-2">
+            <h3>Services</h3>
+            <ul>
+              <li><a href="exposure-assessment.html">Territorial Exposure Assessment</a></li>
+              <li><a href="disruption-response.html">Operational Disruption Response</a></li>
+              <li><a href="territorial-recovery.html">Strategic Territorial Recovery</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
