@@ -516,6 +516,138 @@
   }
 
   /* ---------------------------------------------
+     Contact forms → contact@terranovastrategy.com
+     --------------------------------------------- */
+
+  var CONTACT_INBOX = "contact@terranovastrategy.com";
+  var TOPIC_LABELS = {
+    exposure: "Territorial Exposure Assessment",
+    response: "Operational Disruption Response",
+    recovery: "Strategic Territorial Recovery",
+    general: "General enquiry"
+  };
+  var SECTOR_LABELS = {
+    private: "Private business",
+    public: "Public organisation"
+  };
+
+  function topicLabel(value) {
+    return TOPIC_LABELS[value] || value || "Enquiry";
+  }
+
+  function sectorLabel(value) {
+    return SECTOR_LABELS[value] || value || "";
+  }
+
+  function setFormNote(note, message, state) {
+    if (!note) return;
+    note.textContent = message;
+    note.classList.remove("is-error", "is-success");
+    if (state) note.classList.add(state);
+  }
+
+  function sendContactPayload(payload) {
+    var pageUrl = window.location.href;
+    var body = {
+      _subject: "Terranova Strategy enquiry — " + topicLabel(payload.topic),
+      _template: "table",
+      _captcha: "false",
+      _replyto: payload.email,
+      _url: pageUrl,
+      name: [payload.first_name, payload.last_name].filter(Boolean).join(" "),
+      email: payload.email,
+      phone: payload.phone || "",
+      role: payload.role || "",
+      organisation: payload.organisation || payload.company || "",
+      country: payload.country || "",
+      sector: sectorLabel(payload.sector),
+      topic: topicLabel(payload.topic),
+      message: payload.message || payload.comments || "",
+      source: payload.source || "Website",
+      page: pageUrl
+    };
+
+    return fetch("https://formsubmit.co/ajax/" + CONTACT_INBOX, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify(body)
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        var pendingActivation = data && /activat/i.test(String(data.message || ""));
+        if (pendingActivation) return data;
+        if (!response.ok || data.success === "false" || data.success === false) {
+          throw new Error((data && data.message) || "Send failed");
+        }
+        return data;
+      }, function () {
+        if (!response.ok) throw new Error("Send failed");
+      });
+    });
+  }
+
+  function bindContactForm(form, options) {
+    if (!form) return;
+    var settings = options || {};
+    var note = settings.note || form.querySelector(".form-note");
+    var submit = settings.submit || form.querySelector('[type="submit"]');
+    var idleLabel = submit ? submit.textContent : "Submit";
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      var honey = form.querySelector('[name="_honey"]');
+      if (honey && honey.value) return;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      var data = new FormData(form);
+      var payload = { source: settings.source || "Website" };
+      data.forEach(function (value, key) {
+        if (key === "privacy" || key === "_honey") return;
+        payload[key] = String(value).trim();
+      });
+
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = "Sending…";
+      }
+      setFormNote(note, "Sending your message…");
+
+      sendContactPayload(payload)
+        .then(function () {
+          form.reset();
+          if (typeof settings.onReset === "function") settings.onReset();
+          setFormNote(
+            note,
+            "Thank you. Your message has been sent. We will reply to the email you provided.",
+            "is-success"
+          );
+        })
+        .catch(function () {
+          setFormNote(
+            note,
+            "The message could not be sent. Please email " + CONTACT_INBOX + " or try again.",
+            "is-error"
+          );
+        })
+        .then(function () {
+          if (submit) {
+            submit.disabled = false;
+            submit.textContent = idleLabel;
+          }
+        });
+    });
+  }
+
+  bindContactForm(document.getElementById("contact-form"), { source: "Contact page" });
+
+  /* ---------------------------------------------
      Contact popup (CTAs only; nav/footer still go to contact.html)
      --------------------------------------------- */
 
@@ -575,8 +707,9 @@
             '<input type="checkbox" id="contact-popup-privacy" name="privacy" required>' +
             "<span>I have read the <a href=\"#\">Privacy Policy</a>.</span>" +
           "</label>" +
+          '<input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
           '<button type="submit" class="contact-popup__submit">Submit</button>' +
-          '<p class="form-note" data-popup-note>Form delivery is not connected yet. Placeholder only.</p>' +
+          '<p class="form-note" data-popup-note aria-live="polite"></p>' +
         "</form>" +
         '<aside class="contact-popup__hotline" data-contact-hotline-panel hidden>' +
           '<h3 class="contact-popup__hotline-title">Hotline</h3>' +
@@ -630,6 +763,7 @@
       lastTrigger = trigger || null;
       form.reset();
       preselectTopic();
+      setFormNote(note, "");
       setHotline(Boolean(trigger && trigger.hasAttribute("data-contact-hotline")));
       root.classList.add("is-open");
       root.setAttribute("aria-hidden", "false");
@@ -696,13 +830,10 @@
       }
     });
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      note.textContent = "Form delivery is not connected yet. Placeholder only.";
+    bindContactForm(form, {
+      note: note,
+      source: "Contact popup",
+      onReset: preselectTopic
     });
   })();
 

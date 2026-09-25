@@ -20,6 +20,7 @@ venv/
 presentation/
 docs/
 clients/
+assets/Information documents/
 *.pptx
 *.potx
 *.docx

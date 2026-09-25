@@ -35,6 +35,152 @@ window.PS_SERVICES = {
 
 window.PS_INSIGHTS = [
   {
+    slug: "mont-blanc-summer-2026-territorial-economy",
+    articleType: "insight",
+    category: "territorial-risk",
+    title: "Mont Blanc can no longer be sold in August",
+    deck: "This summer all three routes closed. The valley is a €1.4 billion machine. The face is writing the calendar.",
+    excerpt: "Rockfall and thawing permafrost took the summit off the summer brochure. The towns under Mont Blanc still sell one peak, in the hottest month. That is a territorial mistake.",
+    date: "2026-09-25",
+    updated: "2026-09-25",
+    readingTime: 4,
+    author: { name: "Terranova Strategy", role: "Territorial strategy" },
+    heroImage: {
+      src: "assets/images/Mont%20Blanc%20Aiguille%20du%20Midi.jpg",
+      alt: "Aiguille du Midi cable-car station on the rock pyramid above Chamonix, with a cabin on the line",
+      caption: "The cable sells the summit. This summer the face could not hold it.",
+    },
+    countries: ["FR", "IT"],
+    regions: ["Europe"],
+    topics: ["Climate Risk", "Territorial Exposure", "Strategic Recovery", "Operational Resilience"],
+    global: false,
+    globalRelevance: 0.55,
+    editorialRelevance: 0.95,
+    featured: true,
+    intro: "The towns under Mont Blanc sell one thing the rest of the Alps cannot copy: the highest ground. This summer the ground refused. Five heatwaves stored heat in the permafrost. The ice that holds the faces together loosened. Rock fell. The three principal routes were unusable at the same time. That is not a mountain-sports incident. It is a regional economy discovering that its brand sits on a thawing wall.",
+    sections: [
+      {
+        title: "What the face withdrew",
+        layout: "text",
+        text: [
+          "The binder is permafrost. Ludovic Ravanel’s boreholes at the Aiguille du Midi show the rock at the heart of the massif has warmed by 1 to 1.5°C in a decade. The ice in the cracks no longer holds. Between 2007 and 2024 the massif recorded about 2,500 rockfalls of more than 100 cubic metres. This summer the Chamonix mayor, François-Xavier Laffin, put the worst days at about ten of those falls a day. On 12 August some 15,000 cubic metres came off the north face of the Aiguille du Midi — beside the cable that takes on the order of 500,000 visitors a year.",
+          "The Italian normal route was already unusable from 15 July. Alex Campedelli, of the Courmayeur guides, was blunt: the glacier was too crevassed to take clients. French companies suspended the summit. On 11 August Jean-Marc Peillex, mayor of Saint-Gervais, closed the Goûter and Tête Rousse refuges. He cannot close the mountain by decree — he would have to prove the risk had gone. So he closes the huts. Fourth time. His line: the mountain dictates the rules. On reopening, 26 August, he said the massif had stored unprecedented heat, and that the reasonable act is to climb when it is cooler.",
+        ],
+      },
+      {
+        title: "The money sits in the valley",
+        layout: "text",
+        text: [
+          "No official season-loss total has been published. The scale of what was interrupted has. The Chamonix valley is a €1.4 billion tourism economy and about 8,400 jobs. Summer is no longer the junior season: 4.5 million of 8.6 million nights. That summer spend has supported about 3,500 jobs. The Compagnie du Mont-Blanc turns over about €156 million and employs about 400 people in summer.",
+          "The product that stopped is narrower and more expensive. Five-day Mont Blanc programmes sell at €2,400 to €3,800 a head. The Goûter holds 120 beds, Tête Rousse 72: about 2,900 high-mountain nights removed in two August weeks. Courmayeur had already lost the Italian route for six weeks of high season. Companies can send a rope to Gran Paradiso or Monte Rosa. The independent guide whose client came for the roof of the Alps cannot. A town that sits under a single summit discovers it has no second product.",
+        ],
+      },
+      {
+        layout: "key-thought",
+        quote: "A valley that sells one summit in the hottest month is not a destination. It is a single point of failure.",
+      },
+      {
+        title: "Move the summit",
+        layout: "text",
+        text: "Peillex has already said the quiet part: climb when it is cooler. Write that into the calendar. High alpinism belongs in late spring and early autumn. July and August stay open — as hiking, cycling, thermal, via ferrata, the Midi as a viewpoint. Ninety percent of that cable’s traffic is already contemplative. The 4,000er is the part of the brochure the heat is deleting. Keeping it in August is not authenticity. It is a refusal to read the face.",
+        image: {
+          src: "assets/graphics/mont-blanc-deseasonalisation.png",
+          alt: "Chart moving high alpinism out of July and August into spring and autumn, while valley leisure stays through summer",
+          caption: "The heat window is July and August. That is when the valley still has a summer to sell — if the summit is not the product.",
+        },
+      },
+      {
+        title: "A massif is not one town",
+        layout: "text",
+        text: "Do not wait for the Goûter to be safe in August. It will not be, not as a planning assumption. Recover the economy by changing what the territory sells, and where. Les Contamines, Saint-Gervais, Courmayeur, La Thuile, the Val Ferret, Gran Paradiso, Monte Rosa are not overflow car parks. They are the alternative routes and the alternative towns. That means beds, guide desks, mid-station lifts and a professional network that can reroute a rope in a day. Treat Chamonix as the capital of a massif, not the only cash register. Laffin is right that the commune is not ordinary. He is wrong if regulating crowds is the whole strategy. The hazard is not only too many people. It is too many people on the same face, in the same fortnight, on a binder that is melting. Authenticity, for this brand, is to stop promising a July summit it can no longer deliver — and to start selling a region that still works.",
+      },
+    ],
+    conclusion: {
+      text: "The 2026 summer was the mountain editing the brochure. The next season is a planning choice: one peak in the hottest month, or a massif with a calendar that can still be kept.",
+    },
+    relatedService: {
+      id: "recovery",
+      note: "Strategic Territorial Recovery sequences a mountain economy the way a closed route should be sequenced: what the valley can still sell this summer, which towns take the overflow, and which peaks become the shoulder-season product — so a thawing face is not mistaken for the end of the region.",
+    },
+    relatedArticles: ["rising-temperatures-economic-impact-alpine-business", "permafrost-exposure-risk-alpine-regions"],
+  },
+  {
+    slug: "valencia-flood-2024-territorial-recovery",
+    articleType: "insight",
+    category: "natural-hazards",
+    title: "How the 2024 Valencia flood stopped a working region",
+    deck: "A flash flood closed the metropolitan south. The fiscal bill is about €12 billion. Paying claims is not the same as putting the territory back to work.",
+    excerpt: "Two years on, Valencia has paid most of the insurance bill and got industrial parks running again. The works that would change the next flood are still waiting.",
+    date: "2026-10-29",
+    updated: "2026-10-29",
+    readingTime: 5,
+    author: { name: "Terranova Strategy", role: "Territorial strategy" },
+    heroImage: {
+      src: "assets/images/Valencia%20flood%20V30%202024.jpg",
+      alt: "Muddy Turia river running beside the V-30 motorway in Valencia after the October 2024 flood",
+      caption: "The river took the space the city uses. When the ravine fills, the metropolitan corridor is the floodplain.",
+    },
+    countries: ["ES"],
+    regions: ["Europe"],
+    topics: ["Natural Hazards", "Infrastructure", "Operational Resilience", "Strategic Recovery", "Territorial Exposure"],
+    global: false,
+    globalRelevance: 0.68,
+    editorialRelevance: 0.94,
+    featured: true,
+    intro: "On 29 October 2024 a cut-off low sent a flash flood across the south of the Valencia metropolitan area. It was not a slow river rising. Water came down the ravines into l’Horta Sud — the belt of towns, industrial parks and roads that feed the city, the port and the plants just outside the water. The site that looked dry still stopped. Access, workforce and cargo sat in the same flood.",
+    sections: [
+      {
+        title: "What the water closed",
+        layout: "text",
+        text: [
+          "The A-7 and A-3, the metropolitan ring, the approaches to the Port of Valencia. About 5,000 trucks a day use those roads to reach one of Europe’s busiest container ports. Terminals could reopen within a day or two. The landside could not. A plant that was not itself flooded still declared force majeure because the roads around it, and the people who work there, were.",
+          "Eight in ten firms in the inundated parks had to stop. Citrus waiting to leave by sea had no corridor. This was a territorial stop: housing, shops, parks and the motorway failed together because they occupy the same flood path.",
+        ],
+      },
+      {
+        title: "The bill",
+        layout: "text",
+        text: [
+          "Spain’s fiscal watchdog, AIReF, put the public cost at €12.2 billion — more than 8% of the region’s GDP, and the second-largest fiscal shock since 2005 after the pandemic. Other damage estimates ran from about €12 to €18 billion. The Consorcio, Spain’s catastrophe insurer, has paid around €4.4 billion on more than 200,000 claims: homes, vehicles, shops, industrial risks. The state reports more than €9.6 billion deployed in reconstruction and support. That is the cash.",
+          "The social bill sat in the same places. More than 2,300 shops were affected; a year later seven in ten had reopened, two in ten still shut. About 6% of firms in the zero zone closed for good — mostly for lack of cash to restart. Furlough schemes held jobs. Streets, ground floors and lifts did not come back as fast as payroll.",
+        ],
+      },
+      {
+        layout: "key-thought",
+        quote: "Insurance can pay a building. It cannot sequence a region.",
+      },
+      {
+        title: "What came back, and what did not",
+        layout: "text",
+        text: [
+          "Two years on, the pulse of the industrial parks is largely back. Energy use and hiring recovered through 2025. The Consorcio had processed about 99% of material and interruption claims. On the government’s reading, Valencia is again growing above the Spanish average. That is the success of the cash layer.",
+          "The reconstruction layer is slower. Municipal works were allocated and many validated; not all are built. The regional government had executed about two-thirds of an extraordinary credit line by the end of 2025, leaving hundreds of millions uncommitted. Hundreds of lifts in apartment buildings were still out of service well into 2026. Park roads, drainage and signage lagged the firms that had already reopened. Repairs at existing dams and canals were done. The flood-control works that would change the next event remain, in the engineers’ phrase, largely pending.",
+        ],
+      },
+      {
+        title: "Whether the strategy worked",
+        layout: "text",
+        text: [
+          "It worked as a payment strategy. The catastrophe insurer absorbed a historic bill without private cover collapsing; furlough held the workforce; shops and parks came back faster than the first weeks suggested. The Valencia Chamber of Commerce’s one-year survey is the closest long-term business reading: most of the productive tissue survived.",
+          "It has not yet worked as a territorial strategy. A 2026 industry assessment is blunt: a €12 billion disaster has not transformed Spain’s flood resilience. Engineers at the first anniversary said the same — warnings and emergency repairs improved; the map of occupancy on the ravines did not. Money reached families and firms faster than works reached the ground. Paying like-for-like is not the same as deciding what to restore first, what to redesign, and which corridor unlocks the rest.",
+        ],
+      },
+      {
+        title: "What a faster return would have sequenced",
+        layout: "text",
+        text: "An exposure reading would have treated l’Horta Sud as a flood path occupied by parks, housing and the roads to the port — not as a set of plots that looked dry. In the first weeks, a disruption reading would have treated the closed motorway, the port, the parks and the workforce as one event. The larger miss is reconstruction: which access restores the parks; which parks restore jobs; which housing restores the workforce; which hydraulic works change the next flood rather than rebuild the last one. Valencia paid fast. It is still waiting on the order of works that would have put the affected area back in business as a territory.",
+      },
+    ],
+    conclusion: {
+      text: "Two years on, the region is working again in the places that could reopen. The assessment that matters is whether the next flash flood meets a redesigned corridor — or the same occupancy, better indemnified.",
+    },
+    relatedService: {
+      id: "recovery",
+      note: "Strategic Territorial Recovery sequences reconstruction by what unlocks the territory — access, parks, housing, then the works that change the next flood — so a paid claim is not mistaken for a region back in business. Territorial Exposure Assessment would have shown that occupancy on the ravine before the water. Operational Disruption Response would have treated the closed motorway, the port and the parks as one event.",
+    },
+    relatedArticles: ["colombia-earthquake-operational-disruption", "wildfire-risk-southern-europe"],
+  },
+  {
     slug: "colombia-earthquake-operational-disruption",
     articleType: "insight",
     category: "natural-hazards",
@@ -261,7 +407,7 @@ window.PS_INSIGHTS = [
       id: "exposure",
       note: "Territorial Exposure Assessment places slope, torrent and access hazards with the operations, assets and seasons they can take off the books.",
     },
-    relatedArticles: ["permafrost-exposure-risk-alpine-regions", "geography-of-global-supply-chains"],
+    relatedArticles: ["mont-blanc-summer-2026-territorial-economy", "permafrost-exposure-risk-alpine-regions"],
   },
   {
     slug: "permafrost-exposure-risk-alpine-regions",

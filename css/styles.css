@@ -1878,6 +1878,10 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .logo__img--lig
   border-radius: 1rem;
 }
 
+.contact-form {
+  position: relative;
+}
+
 .contact-form h2 {
   margin: 0 0 1.35rem;
   font-size: 1.35rem;
@@ -1983,12 +1987,30 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .logo__img--lig
   font-family: inherit;
   font-size: 0.9375rem;
   font-weight: 600;
-  cursor: not-allowed;
-  opacity: 0.5;
+  cursor: pointer;
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:focus-visible {
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.contact-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .contact-form .form-note {
   margin-top: 0.85rem;
+}
+
+.contact-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .contact-follow {
@@ -2722,6 +2744,14 @@ body.is-leaving {
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   margin-top: 0.75rem;
+}
+
+.form-note.is-success {
+  color: var(--color-text);
+}
+
+.form-note.is-error {
+  color: var(--color-accent);
 }
 
 /* --- Contact popup ------------------------------------------------------- */
