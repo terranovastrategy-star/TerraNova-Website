@@ -63,7 +63,7 @@
     var mount = document.querySelector("[data-include='footer']");
     if (!mount) return;
 
-    fetch(withRoot("includes/footer.html?v=6"))
+    fetch(withRoot("includes/footer.html?v=8"))
       .then(function (response) {
         if (!response.ok) throw new Error("Footer include failed");
         return response.text();
@@ -76,6 +76,9 @@
 
         footer.querySelectorAll("[href]").forEach(function (el) {
           el.setAttribute("href", withRoot(el.getAttribute("href")));
+        });
+        footer.querySelectorAll("[src]").forEach(function (el) {
+          el.setAttribute("src", withRoot(el.getAttribute("src")));
         });
 
         mount.replaceWith(footer);
@@ -714,7 +717,7 @@
         '<aside class="contact-popup__hotline" data-contact-hotline-panel hidden>' +
           '<h3 class="contact-popup__hotline-title">Hotline</h3>' +
           '<p class="contact-popup__hotline-item"><span>Email</span> <a href="mailto:odr@terranova.global">odr@terranova.global</a></p>' +
-          '<p class="contact-popup__hotline-item"><span>Phone</span> <a href="tel:+41610000000">+41 61 000 00 00</a></p>' +
+          '<p class="contact-popup__hotline-item site-phone" hidden><span>Phone</span> <a href="tel:+41610000000">+41 61 000 00 00</a></p>' +
         "</aside>" +
       "</div>";
 

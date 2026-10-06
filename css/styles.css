@@ -160,6 +160,10 @@ button {
   padding: 0 var(--gutter);
 }
 
+.site-phone {
+  display: none !important;
+}
+
 /* Scroll reveals */
 .reveal,
 .reveal-clip,
@@ -252,7 +256,7 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .menu-toggle sp
 .logo__img {
   display: block;
   width: auto;
-  height: 1.5rem;
+  height: 2rem;
 }
 
 .logo__img--light {
@@ -1257,7 +1261,7 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .logo__img--lig
 .footer-brand__logo img {
   display: block;
   width: auto;
-  height: 1.4375rem;
+  height: 1.85rem;
 }
 
 .footer-brand__tagline {
