@@ -256,7 +256,7 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .menu-toggle sp
 .logo__img {
   display: block;
   width: auto;
-  height: 2rem;
+  height: 2.25rem;
 }
 
 .logo__img--light {
@@ -1261,7 +1261,7 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .logo__img--lig
 .footer-brand__logo img {
   display: block;
   width: auto;
-  height: 1.85rem;
+  height: 2.25rem;
 }
 
 .footer-brand__tagline {
