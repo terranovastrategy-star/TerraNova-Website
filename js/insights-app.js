@@ -220,12 +220,15 @@
 
   function rankScore(insight, loc, now) {
     var w = RANKING.weights;
-    return (
+    var base = (
       w.geographic * geographicScore(insight, loc) +
       w.editorial * editorialScore(insight) +
       w.recency * recencyScore(insight, now) +
       w.featured * featuredScore(insight)
     );
+    // Editorial pin: a pinned article always leads the featured slot and
+    // listings, overriding geo personalisation. Use sparingly (one hero).
+    return insight.pinned ? base + 100 : base;
   }
 
   function sortByRank(items, loc) {
