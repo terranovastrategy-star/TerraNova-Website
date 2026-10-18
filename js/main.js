@@ -38,6 +38,48 @@
   applyServiceImages();
 
   /* ---------------------------------------------
+     Who we work with (js/clients.js)
+     --------------------------------------------- */
+
+  function applyClients() {
+    const section = document.querySelector("[data-home-clients]");
+    if (!section) return;
+    const list = section.querySelector("[data-clients-root]");
+    const clients = (window.TN_CLIENTS || []).filter(function (client) {
+      return client && client.name && client.url && client.logo;
+    });
+
+    if (!list || !clients.length) {
+      section.hidden = true;
+      return;
+    }
+
+    clients.forEach(function (client) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.className = "home-clients__link";
+      link.href = client.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.setAttribute("aria-label", client.name + " (opens in a new tab)");
+
+      const img = document.createElement("img");
+      img.src = (document.body.dataset.root || "") + client.logo;
+      img.alt = "";
+      if (client.width) img.width = client.width;
+      if (client.height) img.height = client.height;
+      img.loading = "lazy";
+      img.decoding = "async";
+
+      link.appendChild(img);
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+  }
+
+  applyClients();
+
+  /* ---------------------------------------------
      Studies (shared with homepage preview)
      --------------------------------------------- */
 
@@ -63,7 +105,7 @@
     var mount = document.querySelector("[data-include='footer']");
     if (!mount) return;
 
-    fetch(withRoot("includes/footer.html?v=9"))
+    fetch(withRoot("includes/footer.html?v=10"))
       .then(function (response) {
         if (!response.ok) throw new Error("Footer include failed");
         return response.text();
@@ -708,7 +750,7 @@
           "</div>" +
           '<label class="contact-popup__consent">' +
             '<input type="checkbox" id="contact-popup-privacy" name="privacy" required>' +
-            "<span>I have read the <a href=\"#\">Privacy Policy</a>.</span>" +
+            "<span>I have read the <a href=\"" + withRoot("privacy.html") + "\">Privacy Policy</a>.</span>" +
           "</label>" +
           '<input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
           '<button type="submit" class="contact-popup__submit">Submit</button>' +
