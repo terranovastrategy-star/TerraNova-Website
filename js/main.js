@@ -1347,29 +1347,11 @@
         tracking = Math.max(0, (room - glyphs) / (count - 1));
         span = glyphs + tracking * (count - 1);
       }
-      var from = pointAtDistance(body, pad);
-      var to = pointAtDistance(body, Math.max(pad + 1, len - endPad));
-      var dx = to[0] - from[0];
-      var dy = to[1] - from[1];
-      var dirAt = function (dist) {
-        var ahead = pointAtDistance(body, Math.min(len, dist + 8));
-        var behind = pointAtDistance(body, Math.max(0, dist - 8));
-        return [ahead[0] - behind[0], ahead[1] - behind[1]];
-      };
-      var spanLen = Math.max(1, len - endPad - pad);
-      var prevDir = dirAt(pad);
-      var sharp = false;
-      var step;
-      for (step = 1; step <= 6; step++) {
-        var nextDir = dirAt(pad + spanLen * step / 6);
-        var turn = Math.atan2(
-          prevDir[0] * nextDir[1] - prevDir[1] * nextDir[0],
-          prevDir[0] * nextDir[0] + prevDir[1] * nextDir[1]
-        );
-        if (Math.abs(turn) > 0.7) sharp = true;
-        prevDir = nextDir;
-      }
-      var reverse = !sharp && (Math.abs(dx) >= Math.abs(dy) ? dx < 0 : dy < 0);
+      var midDist = (pad + Math.max(pad + 1, len - endPad)) / 2;
+      var midPt = pointAtDistance(body, midDist);
+      var ahead = pointAtDistance(body, Math.min(len, midDist + 8));
+      var angForward = Math.atan2(ahead[1] - midPt[1], ahead[0] - midPt[0]);
+      var reverse = Math.cos(angForward) < 0;
       var slack = Math.max(0, room - span) / 2;
       var cursor = reverse ? len - endPad - slack : pad + slack;
       for (i = 0; i < count; i++) {
