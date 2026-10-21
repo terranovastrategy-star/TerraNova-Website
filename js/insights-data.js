@@ -108,6 +108,87 @@ window.PS_INSIGHTS = [
     relatedArticles: ["valencia-flood-2024-territorial-recovery", "geography-of-global-supply-chains"],
   },
   {
+    slug: "climate-related-events-supply-chain-management",
+    articleType: "insight",
+    category: "territorial-risk",
+    title: "How can climate-related events affect supply chain management?",
+    deck: "Floods, storms, fire and drought do not hit a spreadsheet. They close the warehouses, corridors, suppliers and plants the chain actually runs through.",
+    excerpt: "Climate-related events affect supply chains at the joints: lost access to sites, forced rerouting of critical goods, suppliers that cannot ship, and manufacturing that slows or stops.",
+    date: "2026-10-21",
+    updated: "2026-10-21",
+    readingTime: 4,
+    author: { name: "Terranova Strategy", role: "Territorial strategy" },
+    heroImage: {
+      src: "assets/images/Supply%20Chain%20Management.jpeg",
+      alt: "Aerial view of a container terminal at sunset, with stacked boxes and ship berths",
+      caption: "A supply chain is sites, warehouses, corridors and suppliers. Climate closes the places, not the spreadsheet.",
+    },
+    countries: [],
+    regions: [],
+    topics: ["Climate Risk", "Supply-chain disruption", "Territorial Exposure", "Operational Resilience"],
+    global: true,
+    globalRelevance: 0.92,
+    editorialRelevance: 0.96,
+    featured: true,
+    intro: "Climate-related events are the physical shocks a changing climate makes more frequent, more intense, or both: too much water, too little water, heat, wind, fire. For a supply chain they are not a sustainability footnote. They are the week the warehouse cannot be reached, the supplier cannot ship, and the plant cannot run.",
+    sections: [
+      {
+        title: "What climate-related events are",
+        layout: "text",
+        text: "A climate-related event is a weather or climate hazard that hits a territory hard enough to interrupt activity. Floods, heatwaves, droughts, wildfires, tropical storms, cyclones, freeze. Some last hours. Some last a season. What they share is that they act on a place — a basin, a coast, a forest belt, a mountain corridor — and on everything that place is asked to carry.",
+      },
+      {
+        title: "The hazards that actually close a chain",
+        layout: "text",
+        text: [
+          "Not every hazard is equally relevant to supply-chain management. The ones that matter are those that close movement and production. River and coastal floods take warehouses, plants and last-mile roads. Tropical storms and cyclones shut ports and knock out power. Wildfire closes motorways and forces sites to stop. Drought and low water strand barges on the corridors that still move bulk. Extreme heat slows labour and trips infrastructure. Freeze and thaw close alpine and northern routes.",
+          "The mechanism is the same in each case: a territory stops being usable, and the chain that ran through it stops with it.",
+        ],
+      },
+      {
+        title: "Where the major risks sit",
+        layout: "text",
+        text: [
+          "A supply chain is not a list of SKUs. It is sites, warehouses, corridors and suppliers arranged in a sequence. The major risks sit at the joints.",
+          "Lose access to a warehouse or a plant, and inventory that exists on paper cannot be picked or shipped. A flooded yard, a burned approach road, a port under a cyclone warning: the building can be standing and the operation still closed.",
+          "Critical goods then have to be rerouted. That is not a line in a contingency plan. It is capacity on another corridor, another carrier, another border — often at the same moment everyone else is looking for the same alternative.",
+          "Suppliers are hit even when your own sites are dry. A tier-two plant in a flood basin, a single-source component on a fire-prone belt, a packing house on a storm coast: your lead time becomes their outage. Manufacturing slows or stops when inbound parts, outbound space, power, water or people cannot arrive. The interruption is territorial, not mechanical.",
+        ],
+      },
+      {
+        layout: "key-thought",
+        quote: "The chain fails where the territory fails: the warehouse you cannot enter, the corridor you cannot use, the supplier who cannot ship, the plant that cannot run.",
+      },
+      {
+        title: "See the vulnerabilities first",
+        layout: "text",
+        text: "The first move is not more inventory. It is knowing where the vulnerabilities actually sit. An exposure assessment traces the operating system — plants, warehouses, access, energy, key suppliers, the corridors that move critical goods — onto the hazards that can close those places. It separates a site that looks exposed on a map from a link that would actually stop the chain. Without that picture, resilience spend goes to the visible plot, and the single road, the single warehouse, the single supplier remain uninsured by design.",
+      },
+      {
+        title: "Rearrange the chain before it has to",
+        layout: "text",
+        text: "Once the weak joints are named, the chain can be adapted. Preventive rerouting means deciding, before the event, which alternative corridor takes the critical flow — not discovering the option when the primary is already closed. Intermediate warehousing puts a buffer on the safe side of an exposed crossing, so a closed valley or a closed port does not empty the line. Backup suppliers for critical goods are not a second name on a spreadsheet if they sit on the same corridor; they have to be territorially independent. Rearranging the chain is cheaper than discovering, in the event, that there was no second path.",
+      },
+      {
+        title: "How Terranova helps",
+        layout: "text",
+        text: [
+          "Terranova exists to make that picture usable for the people who have to keep the chain moving. We do not start from a hazard atlas. We start from how the operation runs, then we overlay the territory on it.",
+          "Which sites, warehouses, corridors and suppliers would actually stop you. Which of those have no substitute. Which ones you can still act on this year. The conversation that follows is practical: where to put the next warehouse, which supplier to qualify, which corridor to pre-agree, which inventory to hold. That is the exposure assessment we run — a map of the joints you can still act on, not a report for a drawer.",
+        ],
+        link: {
+          href: "exposure-assessment.html",
+          label: "Territorial Exposure Assessment",
+        },
+      },
+    ],
+    conclusion: {
+      text: "Climate-related events affect supply chain management by closing the places the chain runs through. The work is to see those places before they close, and to have a second path for the goods that cannot wait.",
+    },
+    contactCta: true,
+    relatedArticles: ["geography-of-global-supply-chains", "territorial-dependencies-business-continuity"],
+  },
+  {
     slug: "mont-blanc-summer-2026-territorial-economy",
     articleType: "insight",
     category: "territorial-risk",
@@ -663,6 +744,6 @@ window.PS_INSIGHTS = [
       id: "exposure",
       note: "Territorial Exposure Assessment traces critical flows onto the corridors and jurisdictions they actually use, so concentration is visible even when supplier names differ.",
     },
-    relatedArticles: ["danube-rhine-low-water-cost-central-europe", "wildfire-risk-southern-europe"],
+    relatedArticles: ["climate-related-events-supply-chain-management", "danube-rhine-low-water-cost-central-europe"],
   },
 ];

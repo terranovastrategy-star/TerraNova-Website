@@ -778,7 +778,70 @@
     var head = createSectionHead(section);
     if (head) prose.appendChild(head);
     appendParagraphs(prose, section.text);
+    if (section.link && section.link.href) {
+      var quiet = document.createElement("p");
+      quiet.className = "ed-quiet-link";
+      var a = document.createElement("a");
+      a.className = "ed-text-link";
+      a.href = withRoot(section.link.href);
+      a.innerHTML = (section.link.label || "Read more") + " " + svgArrow();
+      quiet.appendChild(a);
+      prose.appendChild(quiet);
+    }
     return prose;
+  }
+
+  function createArticleContact() {
+    var section = document.createElement("section");
+    section.className = "home-contact";
+    section.setAttribute("aria-labelledby", "article-contact-heading");
+    section.innerHTML =
+      '<div class="home-contact__card">' +
+        '<form class="contact-form" id="article-contact-form" aria-label="Contact form" novalidate>' +
+          '<h2 id="article-contact-heading">Contact us</h2>' +
+          '<p class="home-contact__lead">Please complete the form with your details, and we will be in touch shortly.</p>' +
+          '<div class="home-contact__fields">' +
+            '<div class="contact-form__row">' +
+              '<div class="contact-form__field">' +
+                '<label for="article-contact-first">First name <span class="contact-form__req" aria-hidden="true">*</span></label>' +
+                '<input class="field" type="text" id="article-contact-first" name="first_name" autocomplete="given-name" required>' +
+              "</div>" +
+              '<div class="contact-form__field">' +
+                '<label for="article-contact-last">Last name <span class="contact-form__req" aria-hidden="true">*</span></label>' +
+                '<input class="field" type="text" id="article-contact-last" name="last_name" autocomplete="family-name" required>' +
+              "</div>" +
+            "</div>" +
+            '<div class="contact-form__field">' +
+              '<label for="article-contact-email">Work email <span class="contact-form__req" aria-hidden="true">*</span></label>' +
+              '<input class="field" type="email" id="article-contact-email" name="email" autocomplete="email" required>' +
+            "</div>" +
+            '<div class="contact-form__field">' +
+              '<label for="article-contact-organisation">Organisation <span class="contact-form__req" aria-hidden="true">*</span></label>' +
+              '<input class="field" type="text" id="article-contact-organisation" name="organisation" autocomplete="organization" required>' +
+            "</div>" +
+            '<div class="contact-form__field home-contact__span">' +
+              '<label for="article-contact-topic">Topic <span class="contact-form__req" aria-hidden="true">*</span></label>' +
+              '<select class="field" id="article-contact-topic" name="topic" required>' +
+                '<option value="">Select…</option>' +
+                '<option value="exposure">Territorial Exposure Assessment</option>' +
+                '<option value="response">Operational Disruption Response</option>' +
+                '<option value="recovery">Strategic Territorial Recovery</option>' +
+                '<option value="general">General enquiry</option>' +
+              "</select>" +
+            "</div>" +
+          "</div>" +
+          '<div class="home-contact__actions">' +
+            '<label class="contact-form__consent">' +
+              '<input type="checkbox" id="article-contact-privacy" name="privacy" required>' +
+              '<span>I have read the <a href="' + withRoot("privacy.html") + '">Privacy Policy</a>. <span class="contact-form__req" aria-hidden="true">*</span></span>' +
+            "</label>" +
+            '<button type="submit" class="contact-form__submit">Submit</button>' +
+          "</div>" +
+          '<input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">' +
+          '<p class="form-note" aria-live="polite"></p>' +
+        "</form>" +
+      "</div>";
+    return section;
   }
 
   function createThought(quote) {
@@ -1025,6 +1088,10 @@
         more.appendChild(link);
       });
       frame.appendChild(more);
+    }
+
+    if (article.contactCta) {
+      frame.appendChild(createArticleContact());
     }
 
     root.appendChild(frame);

@@ -765,6 +765,7 @@
 
   bindContactForm(document.getElementById("contact-form"), { source: "Contact page" });
   bindContactForm(document.getElementById("home-contact-form"), { source: "Homepage" });
+  bindContactForm(document.getElementById("article-contact-form"), { source: "Insights article" });
 
   /* ---------------------------------------------
      Contact popup (CTAs only; nav/footer still go to contact.html)
