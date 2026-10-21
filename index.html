@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=136">
+  <link rel="stylesheet" href="css/styles.css?v=155">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -129,22 +129,27 @@
   <main id="main">
 
     <section class="hero">
-      <div class="hero__media">
-        <img
-          class="hero__image"
-          src="assets/images/Territorial%20strategy%20switzerland.jpg"
-          alt="Aerial view of territorial infrastructure, transport networks and urban development"
-          width="1920"
-          height="1080"
-          fetchpriority="high"
-          decoding="async"
-        >
-        <span class="hero__shade" aria-hidden="true"></span>
+      <div class="hero__stage">
+        <div class="hero__media">
+          <img
+            class="hero__image"
+            src="assets/images/Territorial%20strategy%20switzerland.jpg"
+            alt="Aerial view of territorial infrastructure, transport networks and urban development"
+            width="1920"
+            height="1080"
+            fetchpriority="high"
+            decoding="async"
+          >
+          <span class="hero__shade" aria-hidden="true"></span>
+        </div>
+
+        <div class="hero__content">
+          <h2>TERRITORIAL STRATEGY</h2>
+          <h1>For a world in disruption</h1>
+        </div>
       </div>
 
-      <div class="hero__content">
-        <h2>TERRITORIAL STRATEGY</h2>
-        <h1>For a world in disruption</h1> 
+      <div class="hero__after" hidden>
         <p class="hero__lead">We help businesses and institutions understand how changing territorial conditions affect their operations, investments and communities.</p>
         <div class="hero__actions">
           <a class="text-cta text-cta--light" href="contact.html">
@@ -234,80 +239,121 @@
       </div>
     </section>
 
+    <section class="section-cycle" data-cycle>
+      <div class="container">
+        <div class="cycle">
+          <div class="cycle__copy">
+            <h2>We support during the full disruption cycle.</h2>
+            <p>From prevention to recovery we support decision-makers on navigating each stage of the cycle to ensure resilience, fast recovery and sustainable development.</p>
+          </div>
+          <figure class="cycle__visual">
+            <svg data-cycle-svg viewBox="0 64 640 460" role="img" aria-label="Three stages — prevention, reaction and recovery — close into one cycle with one partner.">
+              <defs>
+                <filter id="cycle-shadow" x="-25%" y="-25%" width="150%" height="150%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#202220" flood-opacity="0.1"/>
+                </filter>
+              </defs>
+              <g data-cycle-arrows filter="url(#cycle-shadow)"></g>
+              <g data-cycle-labels></g>
+              <g class="cycle__hub" data-cycle-hub opacity="0">
+                <text x="320" y="286" text-anchor="middle">3 Stages</text>
+                <text x="320" y="318" text-anchor="middle">1 Cycle</text>
+                <text class="cycle__hub-accent" x="320" y="350" text-anchor="middle">1 Partner</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section-services" id="services">
       <div class="container">
+        <h2 class="services-heading">A service for every phase</h2>
         <div class="services-grid">
 
           <article class="service-card reveal" data-service="exposure">
-            <a href="exposure-assessment.html">
+            <a class="service-card__panel" href="exposure-assessment.html" aria-expanded="false">
+              <span class="service-card__kind">Preventive</span>
+              <div class="service-card__media">
+                <img class="service-card__image" alt="" loading="lazy" decoding="async">
+              </div>
               <div class="service-card__copy">
                 <span class="service-card__index">01</span>
                 <h3>Territorial Exposure Assessment</h3>
-                <p>Map supply-chain and site dependencies, score exposure with TEAM, and prioritise interventions.</p>
-                <span class="service-card__go">
-                  <span class="arrow-link" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </span>
-              </div>
-              <div class="service-card__media">
-                <img
-                  class="service-card__image"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                >
-                <span class="service-card__overlay" aria-hidden="true"></span>
+                <p class="service-card__lead">See which sites, routes and suppliers sit on exposed ground, and which can stop the operation.</p>
+                <div class="service-card__detail">
+                  <div>
+                    <p>Map supply-chain and site dependencies, score exposure with TEAM, and prioritise interventions.</p>
+                    <ul class="service-card__points">
+                      <li>Risk mitigation</li>
+                      <li>Impact reduction</li>
+                      <li>Supply chain resilience</li>
+                      <li>Maintaining competitiveness</li>
+                    </ul>
+                    <span class="service-card__go">Read more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </div>
               </div>
             </a>
+            <button type="button" class="service-card__close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
           </article>
 
           <article class="service-card reveal reveal-delay-1" data-service="response">
-            <a href="disruption-response.html">
+            <a class="service-card__panel" href="disruption-response.html" aria-expanded="false">
+              <span class="service-card__kind">Reactive</span>
+              <div class="service-card__media">
+                <img class="service-card__image" alt="" loading="lazy" decoding="async">
+              </div>
               <div class="service-card__copy">
                 <span class="service-card__index">02</span>
                 <h3>Operational Disruption Response</h3>
-                <p>Rapid post-event analysis to understand impact and define the best path forward — from relocation and reconstruction to alternative operational solutions.</p>
-                <span class="service-card__go">
-                  <span class="arrow-link" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </span>
-              </div>
-              <div class="service-card__media">
-                <img
-                  class="service-card__image"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                >
-                <span class="service-card__overlay" aria-hidden="true"></span>
+                <p class="service-card__lead">When an event is underway, establish what is damaged, what is still moving, and where disruption is spreading.</p>
+                <div class="service-card__detail">
+                  <div>
+                    <p>Rapid post-event analysis to understand impact and define the best path forward — from relocation and reconstruction to alternative operational solutions.</p>
+                    <ul class="service-card__points">
+                      <li>Crisis management support</li>
+                      <li>Business continuity assistance</li>
+                      <li>Operations reactivation</li>
+                    </ul>
+                    <span class="service-card__go">Read more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </div>
               </div>
             </a>
+            <button type="button" class="service-card__close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
           </article>
 
           <article class="service-card reveal reveal-delay-2" data-service="recovery">
-            <a href="territorial-recovery.html">
+            <a class="service-card__panel" href="territorial-recovery.html" aria-expanded="false">
+              <span class="service-card__kind">Proactive</span>
+              <div class="service-card__media">
+                <img class="service-card__image" alt="" loading="lazy" decoding="async">
+              </div>
               <div class="service-card__copy">
                 <span class="service-card__index">03</span>
                 <h3>Strategic Territorial Recovery</h3>
-                <p>Territorial recovery planning with prioritised interventions, timelines and phased strategies after major disruption.</p>
-                <span class="service-card__go">
-                  <span class="arrow-link" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  </span>
-                </span>
-              </div>
-              <div class="service-card__media">
-                <img
-                  class="service-card__image"
-                  alt=""
-                  loading="lazy"
-                  decoding="async"
-                >
-                <span class="service-card__overlay" aria-hidden="true"></span>
+                <p class="service-card__lead">After major disruption, set what rebuilds first, on what timeline, and where investment should go.</p>
+                <div class="service-card__detail">
+                  <div>
+                    <p>Territorial recovery planning with prioritised interventions, timelines and phased strategies after major disruption.</p>
+                    <ul class="service-card__points">
+                      <li>Strategic planning</li>
+                      <li>Long-term improved recovery</li>
+                      <li>Sustainable development</li>
+                    </ul>
+                    <span class="service-card__go">Read more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  </div>
+                </div>
               </div>
             </a>
+            <button type="button" class="service-card__close" aria-label="Close">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </button>
           </article>
 
         </div>
@@ -352,6 +398,54 @@
       </div>
     </section>
 
+    <section class="home-contact" aria-labelledby="home-contact-heading">
+      <div class="home-contact__card">
+        <form class="contact-form" id="home-contact-form" aria-label="Contact form" novalidate>
+          <h2 id="home-contact-heading">Contact us</h2>
+          <p class="home-contact__lead">Please complete the form with your details, and we will be in touch shortly.</p>
+          <div class="home-contact__fields">
+            <div class="contact-form__row">
+              <div class="contact-form__field">
+                <label for="home-contact-first">First name <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input class="field" type="text" id="home-contact-first" name="first_name" autocomplete="given-name" required>
+              </div>
+              <div class="contact-form__field">
+                <label for="home-contact-last">Last name <span class="contact-form__req" aria-hidden="true">*</span></label>
+                <input class="field" type="text" id="home-contact-last" name="last_name" autocomplete="family-name" required>
+              </div>
+            </div>
+            <div class="contact-form__field">
+              <label for="home-contact-email">Work email <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <input class="field" type="email" id="home-contact-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="contact-form__field">
+              <label for="home-contact-organisation">Organisation <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <input class="field" type="text" id="home-contact-organisation" name="organisation" autocomplete="organization" required>
+            </div>
+            <div class="contact-form__field home-contact__span">
+              <label for="home-contact-topic">Topic <span class="contact-form__req" aria-hidden="true">*</span></label>
+              <select class="field" id="home-contact-topic" name="topic" required>
+                <option value="">Select…</option>
+                <option value="exposure">Territorial Exposure Assessment</option>
+                <option value="response">Operational Disruption Response</option>
+                <option value="recovery">Strategic Territorial Recovery</option>
+                <option value="general">General enquiry</option>
+              </select>
+            </div>
+          </div>
+          <div class="home-contact__actions">
+            <label class="contact-form__consent">
+              <input type="checkbox" id="home-contact-privacy" name="privacy" required>
+              <span>I have read the <a href="privacy.html">Privacy Policy</a>. <span class="contact-form__req" aria-hidden="true">*</span></span>
+            </label>
+            <button type="submit" class="contact-form__submit">Submit</button>
+          </div>
+          <input class="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <p class="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <!-- Shared footer: edit includes/footer.html -->
@@ -362,6 +456,6 @@
   <script src="js/insights-app.js?v=10"></script>
   <script src="js/services.js?v=5"></script>
   <script src="js/clients.js?v=1"></script>
-  <script src="js/main.js?v=29"></script>
+  <script src="js/main.js?v=52"></script>
 </body>
 </html>

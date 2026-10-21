@@ -38,6 +38,79 @@
   applyServiceImages();
 
   /* ---------------------------------------------
+     Homepage service cards — open one, close to reach the next
+     --------------------------------------------- */
+
+  (function initServiceCards() {
+    var grid = document.querySelector(".services-grid");
+    if (!grid) return;
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll(".service-card"));
+    var rowQuery = window.matchMedia("(min-width: 901px)");
+
+    function rowLayout() {
+      return rowQuery.matches;
+    }
+
+    function setOpen(card, focusClose) {
+      cards.forEach(function (other) {
+        var on = other === card;
+        other.classList.toggle("is-open", on);
+        var panel = other.querySelector(".service-card__panel");
+        if (panel) panel.setAttribute("aria-expanded", on ? "true" : "false");
+      });
+      if (focusClose && card) {
+        var closeBtn = card.querySelector(".service-card__close");
+        if (closeBtn) closeBtn.focus();
+      }
+    }
+
+    function clearOpen(returnFocus) {
+      var open = grid.querySelector(".service-card.is-open");
+      var panel = open ? open.querySelector(".service-card__panel") : null;
+      setOpen(null, false);
+      if (returnFocus && panel) panel.focus();
+    }
+
+    grid.addEventListener("click", function (event) {
+      var closeBtn = event.target.closest(".service-card__close");
+      if (closeBtn && grid.contains(closeBtn)) {
+        event.preventDefault();
+        clearOpen(true);
+        return;
+      }
+
+      var panel = event.target.closest(".service-card__panel");
+      if (!panel || !grid.contains(panel)) return;
+      if (!rowLayout()) return;
+
+      var card = panel.closest(".service-card");
+      if (card.classList.contains("is-open")) return;
+
+      event.preventDefault();
+      setOpen(card, true);
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!grid.querySelector(".service-card.is-open")) return;
+      if (grid.contains(event.target)) return;
+      clearOpen(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape") return;
+      if (!grid.querySelector(".service-card.is-open")) return;
+      if (document.querySelector(".contact-popup.is-open")) return;
+      event.preventDefault();
+      clearOpen(true);
+    });
+
+    rowQuery.addEventListener("change", function () {
+      if (!rowQuery.matches) clearOpen(false);
+    });
+  })();
+
+  /* ---------------------------------------------
      Who we work with (js/clients.js)
      --------------------------------------------- */
 
@@ -457,7 +530,7 @@
       return;
     }
 
-    const duration = 1400;
+    const duration = 950;
     const start = performance.now();
 
     function step(now) {
@@ -691,6 +764,7 @@
   }
 
   bindContactForm(document.getElementById("contact-form"), { source: "Contact page" });
+  bindContactForm(document.getElementById("home-contact-form"), { source: "Homepage" });
 
   /* ---------------------------------------------
      Contact popup (CTAs only; nav/footer still go to contact.html)
@@ -926,13 +1000,11 @@
      --------------------------------------------- */
 
   function headerOffset() {
-    var header = document.querySelector(".site-header");
-    return (header ? header.offsetHeight : 80) + 12;
+    return 16;
   }
 
   function scrollToServices(options) {
-    var first = document.querySelector(".services-grid .service-card");
-    var targetEl = first || document.querySelector("#services");
+    var targetEl = document.querySelector("#services") || document.querySelector(".services-grid .service-card");
     if (!targetEl) return;
 
     var top = targetEl.getBoundingClientRect().top + window.scrollY - headerOffset();
@@ -1027,5 +1099,373 @@
     );
 
     observer.observe(section);
+  })();
+
+  /* ---------------------------------------------
+     Cycle graphic — three arrows close into a ring
+     --------------------------------------------- */
+
+  (function initCycleGraphic() {
+    var root = document.querySelector("[data-cycle]");
+    if (!root) return;
+
+    var svg = root.querySelector("[data-cycle-svg]");
+    var arrowLayer = root.querySelector("[data-cycle-arrows]");
+    var labelLayer = root.querySelector("[data-cycle-labels]");
+    var hub = root.querySelector("[data-cycle-hub]");
+    if (!svg || !arrowLayer || !labelLayer || !hub) return;
+
+    var cx = 320;
+    var cy = 308;
+    var rOut = 168;
+    var rIn = 104;
+    var gap = 0.26;
+    var sweep = (Math.PI * 2) / 3 - gap;
+    var head = 0.2;
+    var colors = ["#AF2832", "#C1575F", "#D18288"];
+    var names = ["Prevention", "Reaction", "Recovery"];
+    var side = 20;
+    var gapX = -6;
+    var chevH = 78;
+    var headW = 30;
+    var chevW = 140;
+    var chevY = cy - chevH / 2;
+    var arrows = [];
+
+    function clamp(value, min, max) {
+      return Math.max(min, Math.min(max, value));
+    }
+
+    function polar(radius, angle) {
+      return [cx + radius * Math.cos(angle), cy + radius * Math.sin(angle)];
+    }
+
+    var steps = 36;
+    var rMid = (rOut + rIn) / 2;
+    var filletR = 20;
+    var runIn = 4;
+    var filletStartX = cx + rMid - filletR;
+    var straightSpan = filletStartX - side - runIn;
+    chevW = (straightSpan - gapX * 2) / 3;
+
+    function toPath(pts) {
+      return "M" + pts.map(function (pt) {
+        return pt[0].toFixed(1) + " " + pt[1].toFixed(1);
+      }).join("L") + "Z";
+    }
+
+    function smoothstep(edge0, edge1, value) {
+      var t = clamp((value - edge0) / (edge1 - edge0), 0, 1);
+      return t * t * (3 - 2 * t);
+    }
+
+    function pointAt(pts, u) {
+      var n = pts.length - 1;
+      var f = clamp(u, 0, 1) * n;
+      var i = Math.min(n - 1, Math.floor(f));
+      var t = f - i;
+      return [
+        pts[i][0] + (pts[i + 1][0] - pts[i][0]) * t,
+        pts[i][1] + (pts[i + 1][1] - pts[i][1]) * t
+      ];
+    }
+
+    function cubic(p0, p1, p2, p3, u) {
+      var m = 1 - u;
+      var a = m * m * m;
+      var b = 3 * m * m * u;
+      var c = 3 * m * u * u;
+      var d = u * u * u;
+      return [
+        a * p0[0] + b * p1[0] + c * p2[0] + d * p3[0],
+        a * p0[1] + b * p1[1] + c * p2[1] + d * p3[1]
+      ];
+    }
+
+    function buildTrack() {
+      var midY = chevY + chevH / 2;
+      var bodyLen = chevW - headW;
+      var pitch = chevW + gapX;
+      var lineSpan = filletStartX - side;
+      var pts = [];
+      var i;
+      for (i = 0; i <= 24; i++) {
+        pts.push([side + lineSpan * (i / 24), midY]);
+      }
+      var straightEnd = polylineLength(pts);
+      var center = [filletStartX, midY - filletR];
+      var filletSteps = 14;
+      for (i = 1; i <= filletSteps; i++) {
+        var theta = (Math.PI / 2) * (i / filletSteps);
+        pts.push([
+          center[0] + filletR * Math.sin(theta),
+          center[1] + filletR * Math.cos(theta)
+        ]);
+      }
+      var tails = [0, 1, 2].map(function (index) {
+        return -Math.PI / 2 - index * ((Math.PI * 2) / 3) + sweep / 2;
+      });
+      var filletEnd = pts[pts.length - 1];
+      var aStart = Math.atan2(filletEnd[1] - cy, filletEnd[0] - cx);
+      pts[pts.length - 1] = polar(rMid, aStart);
+      var aEnd = tails[2] - sweep;
+      var arcSteps = 96;
+      var arcOrigin = 0;
+      var length = polylineLength(pts);
+      var prevA = aStart;
+      var prevPt = pts[pts.length - 1];
+      for (i = 1; i <= arcSteps; i++) {
+        var a = aStart + (aEnd - aStart) * (i / arcSteps);
+        var pt = polar(rMid, a);
+        var seg = Math.hypot(pt[0] - prevPt[0], pt[1] - prevPt[1]);
+        if (!arcOrigin && a <= tails[0]) {
+          var spanA = prevA - a;
+          var into = (prevA - tails[0]) / (spanA || 1);
+          arcOrigin = length + seg * into;
+        }
+        length += seg;
+        pts.push(pt);
+        prevA = a;
+        prevPt = pt;
+      }
+      for (i = 1; i <= 12; i++) pts.push(polar(rMid, aEnd - head * (i / 12)));
+      return {
+        pts: pts,
+        straightEnd: straightEnd,
+        arcOrigin: arcOrigin,
+        total: polylineLength(pts),
+        bodyLen: bodyLen,
+        pitch: pitch,
+        arcLen: rMid * sweep,
+        arcPitch: rMid * ((Math.PI * 2) / 3)
+      };
+    }
+
+    function sampleSpan(pts, start, length, n) {
+      var out = [];
+      var i;
+      for (i = 0; i <= n; i++) out.push(pointAtDistance(pts, start + length * (i / n)));
+      return out;
+    }
+
+    function rail(track, index, t) {
+      var windowLen = track.bodyLen + (track.arcLen - track.bodyLen) * t;
+      var from = index * track.pitch;
+      var to = track.arcOrigin + index * track.arcPitch;
+      var start = from + (to - from) * t;
+      var end = start + windowLen;
+      var onCurve = clamp((end - track.straightEnd) / windowLen, 0, 1);
+      var body = sampleSpan(track.pts, start, windowLen, steps);
+      var headLen = headW + (head * rMid - headW) * onCurve;
+      var tip = pointAtDistance(track.pts, Math.min(track.total - 0.5, end + headLen));
+      return {
+        body: body,
+        tip: tip,
+        width: chevH + (rOut - rIn - chevH) * onCurve,
+        notch: headW * 0.72 * (1 - onCurve)
+      };
+    }
+
+    function ribbon(shape) {
+      var body = shape.body;
+      var left = [];
+      var right = [];
+      var i;
+      var i0;
+      var i1;
+      var dx;
+      var dy;
+      var len;
+      for (i = 0; i < body.length; i++) {
+        i0 = Math.max(0, i - 1);
+        i1 = Math.min(body.length - 1, i + 1);
+        dx = body[i1][0] - body[i0][0];
+        dy = body[i1][1] - body[i0][1];
+        len = Math.hypot(dx, dy) || 1;
+        left.push([
+          body[i][0] + (-dy / len) * shape.width / 2,
+          body[i][1] + (dx / len) * shape.width / 2
+        ]);
+        right.push([
+          body[i][0] - (-dy / len) * shape.width / 2,
+          body[i][1] - (dx / len) * shape.width / 2
+        ]);
+      }
+      var pts = left.concat([shape.tip], right.reverse());
+      if (shape.notch > 0.5) {
+        dx = body[1][0] - body[0][0];
+        dy = body[1][1] - body[0][1];
+        len = Math.hypot(dx, dy) || 1;
+        pts.push([
+          body[0][0] + (dx / len) * shape.notch,
+          body[0][1] + (dy / len) * shape.notch
+        ]);
+      }
+      return pts;
+    }
+
+    function polylineLength(pts) {
+      var total = 0;
+      var i;
+      for (i = 1; i < pts.length; i++) {
+        total += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
+      }
+      return total;
+    }
+
+    function pointAtDistance(pts, dist) {
+      var remain = Math.max(0, dist);
+      var i;
+      for (i = 1; i < pts.length; i++) {
+        var dx = pts[i][0] - pts[i - 1][0];
+        var dy = pts[i][1] - pts[i - 1][1];
+        var seg = Math.hypot(dx, dy);
+        if (remain <= seg || i === pts.length - 1) {
+          var t = seg === 0 ? 0 : Math.min(1, remain / seg);
+          return [pts[i - 1][0] + dx * t, pts[i - 1][1] + dy * t];
+        }
+        remain -= seg;
+      }
+      return pts[pts.length - 1];
+    }
+
+    function placeWord(body, texts, inset) {
+      var len = polylineLength(body);
+      var advances = texts.map(function (text) {
+        return Math.max(7, text.getComputedTextLength());
+      });
+      var tracking = 1.6;
+      var count = texts.length;
+      var glyphs = 0;
+      var i;
+      for (i = 0; i < count; i++) glyphs += advances[i];
+      var span = glyphs + tracking * (count - 1);
+      var pad = Math.max(len * 0.08, inset || 0);
+      var endPad = Math.min(len * 0.08, Math.max(4, len - pad - 16));
+      var room = Math.max(10, len - pad - endPad);
+      if (span > room) {
+        tracking = Math.max(0, (room - glyphs) / (count - 1));
+        span = glyphs + tracking * (count - 1);
+      }
+      var from = pointAtDistance(body, pad);
+      var to = pointAtDistance(body, Math.max(pad + 1, len - endPad));
+      var dx = to[0] - from[0];
+      var dy = to[1] - from[1];
+      var dirAt = function (dist) {
+        var ahead = pointAtDistance(body, Math.min(len, dist + 8));
+        var behind = pointAtDistance(body, Math.max(0, dist - 8));
+        return [ahead[0] - behind[0], ahead[1] - behind[1]];
+      };
+      var spanLen = Math.max(1, len - endPad - pad);
+      var prevDir = dirAt(pad);
+      var sharp = false;
+      var step;
+      for (step = 1; step <= 6; step++) {
+        var nextDir = dirAt(pad + spanLen * step / 6);
+        var turn = Math.atan2(
+          prevDir[0] * nextDir[1] - prevDir[1] * nextDir[0],
+          prevDir[0] * nextDir[0] + prevDir[1] * nextDir[1]
+        );
+        if (Math.abs(turn) > 0.7) sharp = true;
+        prevDir = nextDir;
+      }
+      var reverse = !sharp && (Math.abs(dx) >= Math.abs(dy) ? dx < 0 : dy < 0);
+      var slack = Math.max(0, room - span) / 2;
+      var cursor = reverse ? len - endPad - slack : pad + slack;
+      for (i = 0; i < count; i++) {
+        cursor += (reverse ? -1 : 1) * advances[i] / 2;
+        var p = pointAtDistance(body, cursor);
+        var p2 = pointAtDistance(body, cursor + (reverse ? -5 : 5));
+        var ang = Math.atan2(p2[1] - p[1], p2[0] - p[0]);
+        texts[i].setAttribute(
+          "transform",
+          "translate(" + p[0].toFixed(1) + " " + p[1].toFixed(1) + ") rotate(" + (ang * 180 / Math.PI).toFixed(1) + ")"
+        );
+        cursor += (reverse ? -1 : 1) * (advances[i] / 2 + tracking);
+      }
+    }
+
+    names.forEach(function (name, index) {
+      var ns = "http://www.w3.org/2000/svg";
+      var group = document.createElementNS(ns, "g");
+      var path = document.createElementNS(ns, "path");
+      path.setAttribute("fill", colors[index]);
+      var word = document.createElementNS(ns, "g");
+      word.setAttribute("fill", "#FFFFFF");
+      word.setAttribute("font-family", "Inter, Segoe UI, sans-serif");
+      word.setAttribute("font-size", "14");
+      word.setAttribute("font-weight", "500");
+      var letters = name.toUpperCase().split("");
+      var texts = letters.map(function (letter) {
+        var text = document.createElementNS(ns, "text");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("dominant-baseline", "central");
+        text.textContent = letter;
+        word.appendChild(text);
+        return text;
+      });
+      group.appendChild(path);
+      group.appendChild(word);
+      arrowLayer.appendChild(group);
+      arrows.push({ group: group, path: path, texts: texts, word: word });
+    });
+
+    var track = buildTrack();
+
+    function frame(progress) {
+      arrows.forEach(function (arrow, index) {
+        var shape = rail(track, index, progress);
+        arrow.path.setAttribute("d", toPath(ribbon(shape)));
+        var len = polylineLength(shape.body);
+        var room = Math.max(36, len - shape.notch * 0.9 - len * 0.1);
+        arrow.word.setAttribute("font-size", "15");
+        var glyphs = 0;
+        arrow.texts.forEach(function (text) {
+          glyphs += Math.max(6, text.getComputedTextLength());
+        });
+        var size = Math.min(15, 15 * room / (glyphs + 1.2 * (arrow.texts.length - 1)));
+        arrow.word.setAttribute("font-size", size.toFixed(2));
+        placeWord(shape.body, arrow.texts, shape.notch * 0.9);
+      });
+      hub.setAttribute("opacity", smoothstep(0.78, 1, progress).toFixed(3));
+    }
+
+    frame(0);
+
+    if (reduceMotion) {
+      frame(1);
+      return;
+    }
+
+    var played = false;
+
+    function play() {
+      if (played) return;
+      played = true;
+      var startTime = 0;
+      var duration = 1800;
+      function tick(now) {
+        if (!startTime) startTime = now;
+        var progress = clamp((now - startTime) / duration, 0, 1);
+        frame(progress);
+        if (progress < 1) window.requestAnimationFrame(tick);
+      }
+      window.requestAnimationFrame(tick);
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      play();
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) play();
+        });
+      },
+      { threshold: 0.42 }
+    );
+    observer.observe(root);
   })();
 })();
