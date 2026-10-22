@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Point this at the production origin when the site is live.
-# Sitemap: https://example.com/sitemap.xml
+Sitemap: https://terranovastrategy.com/sitemap.xml
