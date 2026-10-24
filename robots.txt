@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /studies/_template
+Disallow: /studies/_template.html
+Disallow: /documents/
 
 Sitemap: https://terranovastrategy.com/sitemap.xml

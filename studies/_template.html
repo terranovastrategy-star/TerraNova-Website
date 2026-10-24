@@ -22,11 +22,14 @@
   <link rel="icon" href="../assets/brand/favicon.svg?v=3" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../assets/brand/apple-touch-icon.png?v=3">
   <title>[Study title] — Terranova Strategy</title>
+  <link rel="canonical" href="https://terranovastrategy.com/insights">
+  <meta name="robots" content="noindex, follow">
   <meta name="description" content="[One sentence describing the study, ~150 characters.]">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=171">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"></noscript>
+  <link rel="stylesheet" href="../css/styles.css?v=172">
 </head>
 <body data-root="../">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -46,7 +49,7 @@
           </button>
           <div class="nav-dropdown__panel">
             <a href="../exposure-assessment.html">Territorial Exposure Assessment</a>
-            <a href="../disruption-response.html">Operational Disruption Response</a>
+            <a href="../disruption-response.html">Crisis Management and Business Continuity</a>
             <a href="../territorial-recovery.html">Strategic Territorial Recovery</a>
           </div>
         </div>
@@ -64,7 +67,7 @@
     <span class="mobile-nav__label">Services</span>
     <div class="mobile-sub">
       <a href="../exposure-assessment.html">Territorial Exposure Assessment</a>
-      <a href="../disruption-response.html">Operational Disruption Response</a>
+      <a href="../disruption-response.html">Crisis Management and Business Continuity</a>
       <a href="../territorial-recovery.html">Strategic Territorial Recovery</a>
     </div>
     <a href="../insights.html">Insights</a>
@@ -278,10 +281,61 @@
   </main>
 
   <!-- Shared footer: edit includes/footer.html -->
-  <footer class="site-footer" data-include="footer"></footer>
+  <footer class="site-footer" data-include="footer">
+<div class="footer-brand">
+    <a class="footer-brand__logo" href="../index.html" aria-label="Terranova Strategy home">
+      <img src="../assets/brand/terranova-logo-light.png?v=4" alt="Terranova Strategy" width="221" height="40" decoding="async">
+    </a>
+    <p class="footer-brand__tagline">Territorial strategy consultancy: exposure, disruption, recovery and long-term territorial development for businesses and public organisations.</p>
+  </div>
+
+  <div class="footer-directory">
+    <nav class="footer-block" aria-label="Footer explore">
+      <h2 class="footer-block__title">Explore</h2>
+      <ul>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../index.html#services">Services</a></li>
+        <li><a href="../insights.html">Insights</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-block" aria-label="Footer services">
+      <h2 class="footer-block__title">Services</h2>
+      <ul>
+        <li><a href="../exposure-assessment.html">Territorial Exposure Assessment</a></li>
+        <li><a href="../disruption-response.html">Crisis Management and Business Continuity</a></li>
+        <li><a href="../territorial-recovery.html">Strategic Territorial Recovery</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-block footer-block--contact">
+      <h2 class="footer-block__title">Contact</h2>
+      <address class="footer-address">
+        Güterstrasse 144<br>
+        4053 Basel<br>
+        Switzerland
+      </address>
+      <p class="footer-contact">
+        <span class="site-phone" hidden>
+          <a href="tel:+41610000000">+41 61 000 00 00</a><br>
+        </span>
+        <a href="mailto:contact@terranovastrategy.com">contact@terranovastrategy.com</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-colophon">
+    <span>&copy; 2026 Terranova Strategy</span>
+    <nav class="footer-legal" aria-label="Legal">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../legal.html">Legal notice</a>
+    </nav>
+  </div>
+</footer>
 
 
-  <script src="../js/studies.js?v=6"></script>
-  <script src="../js/main.js?v=60"></script>
+  <script src="../js/studies.js?v=7" defer></script>
+  <script src="../js/main.js?v=63" defer></script>
 </body>
 </html>

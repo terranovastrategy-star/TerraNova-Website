@@ -243,6 +243,8 @@
   function selectFeatured(items, loc) {
     var published = items.filter(Boolean);
     if (!published.length) return null;
+    var lead = published.filter(function (item) { return item.listingLead; });
+    if (lead.length) return lead[0];
     var flagged = published.filter(function (item) { return item.featured; });
     var pool = flagged.length ? flagged : published;
     return sortByRank(pool, loc)[0];
@@ -318,8 +320,36 @@
     return (item && (item.deck || item.subtitle || item.excerpt)) || "";
   }
 
+  var SITE_ORIGIN = "https://terranovastrategy.com";
+
+  function insightFile(slug) {
+    return "insights/" + encodeURIComponent(slug) + ".html";
+  }
+
+  function absoluteInsightUrl(slug) {
+    return SITE_ORIGIN + "/insights/" + encodeURIComponent(slug);
+  }
+
+  function absoluteAsset(src) {
+    if (!src) return "";
+    if (/^https?:/i.test(src)) return src;
+    return SITE_ORIGIN + "/" + String(src).replace(/^(\.\.\/)+/, "");
+  }
+
   function articleUrl(insight) {
-    return withRoot("insights/article.html?slug=" + encodeURIComponent(insight.slug));
+    return withRoot(insightFile(insight.slug));
+  }
+
+  function documentTitle(article) {
+    if (article.metaTitle) return article.metaTitle;
+    var branded = article.title + " — Terranova Strategy";
+    if (branded.length <= 60) return branded;
+    return article.title;
+  }
+
+  function documentDescription(article) {
+    if (article.metaDescription) return article.metaDescription;
+    return article.excerpt || articleDeck(article);
   }
 
   function svgArrow() {
@@ -824,7 +854,7 @@
               '<select class="field" id="article-contact-topic" name="topic" required>' +
                 '<option value="">Select…</option>' +
                 '<option value="exposure">Territorial Exposure Assessment</option>' +
-                '<option value="response">Operational Disruption Response</option>' +
+                '<option value="response">Crisis Management and Business Continuity</option>' +
                 '<option value="recovery">Strategic Territorial Recovery</option>' +
                 '<option value="general">General enquiry</option>' +
               "</select>" +
@@ -918,21 +948,23 @@
   }
 
   function setSeo(article) {
-    var title = article.title + " — Terranova Strategy";
+    var title = documentTitle(article);
     document.title = title;
-    var desc = article.excerpt || articleDeck(article);
-    var canonical = "insights/article.html?slug=" + encodeURIComponent(article.slug);
+    var desc = documentDescription(article);
+    var canonical = absoluteInsightUrl(article.slug);
     var cover = coverImage(article);
+    var image = absoluteAsset(cover.src);
     function setMeta(selector, attr, value) {
       var el = document.querySelector(selector);
       if (el && value) el.setAttribute(attr, value);
     }
     setMeta('meta[name="description"]', "content", desc);
+    setMeta('meta[name="robots"]', "content", "index, follow");
     setMeta('link[rel="canonical"]', "href", canonical);
     setMeta('meta[property="og:title"]', "content", title);
     setMeta('meta[property="og:description"]', "content", desc);
     setMeta('meta[property="og:url"]', "content", canonical);
-    if (cover.src) setMeta('meta[property="og:image"]', "content", cover.src);
+    if (image) setMeta('meta[property="og:image"]', "content", image);
 
     var existing = document.getElementById("article-jsonld");
     if (existing) existing.remove();
@@ -946,9 +978,9 @@
       description: desc,
       datePublished: article.date,
       dateModified: article.updated || article.date,
-      author: { "@type": "Organization", name: (article.author && article.author.name) || "Terranova Strategy" },
-      publisher: { "@type": "Organization", name: "Terranova Strategy" },
-      image: cover.src ? withRoot(cover.src) : undefined,
+      author: { "@type": "Organization", name: (article.author && article.author.name) || "Terranova Strategy", url: SITE_ORIGIN + "/" },
+      publisher: { "@type": "Organization", name: "Terranova Strategy", url: SITE_ORIGIN + "/" },
+      image: image || undefined,
       articleSection: articleTypeLabel(article),
       mainEntityOfPage: canonical,
     });
@@ -1102,7 +1134,18 @@
     if (!page) return;
 
     var params = new URLSearchParams(window.location.search);
+    var path = window.location.pathname || "";
+    var onShell = /\/insights\/article(?:\.html)?$/.test(path);
+    if (onShell && params.get("slug")) {
+      window.location.replace(withRoot(insightFile(params.get("slug"))));
+      return;
+    }
     var slug = params.get("slug") || page.dataset.insightId || "";
+    if (!slug) {
+      var last = path.split("/").filter(Boolean).pop() || "";
+      last = decodeURIComponent(last.replace(/\.html$/i, ""));
+      if (last && last !== "article" && last !== "insights") slug = last;
+    }
     var loading = page.querySelector("[data-article-loading]");
     var missing = page.querySelector("[data-article-missing]");
 

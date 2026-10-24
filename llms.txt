@@ -7,12 +7,12 @@ The commercial offer is three services. Related fields (climate resilience, terr
 ## Pages
 
 - [Home](https://terranovastrategy.com/)
-- [About](https://terranovastrategy.com/about.html) — mission, vision, connected fields, and how the three services sit in that work
-- [Territorial Exposure Assessment](https://terranovastrategy.com/exposure-assessment.html) — before disruption: map dependencies, score exposure (TEAM), grade action
-- [Operational Disruption Response](https://terranovastrategy.com/disruption-response.html) — during the event: reactivation timeframes, government and company tracks, capital this week
-- [Strategic Territorial Recovery](https://terranovastrategy.com/territorial-recovery.html) — after emergency works: reconstruction sequence and element action plan
-- [Insights](https://terranovastrategy.com/insights.html) — research and perspectives on territorial intelligence, risk, resilience and recovery
-- [Contact](https://terranovastrategy.com/contact.html)
+- [About](https://terranovastrategy.com/about) — mission, vision, connected fields, and how the three services sit in that work
+- [Territorial Exposure Assessment](https://terranovastrategy.com/exposure-assessment) — before disruption: map dependencies, score exposure (TEAM), grade action
+- [Crisis Management and Business Continuity](https://terranovastrategy.com/disruption-response) — during the event: reactivation timeframes, government and company tracks, capital this week
+- [Strategic Territorial Recovery](https://terranovastrategy.com/territorial-recovery) — after emergency works: reconstruction sequence and element action plan
+- [Insights](https://terranovastrategy.com/insights) — research and perspectives on territorial intelligence, risk, resilience and recovery
+- [Contact](https://terranovastrategy.com/contact)
 
 Full URL list: https://terranovastrategy.com/sitemap.xml
 

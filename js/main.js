@@ -178,7 +178,7 @@
     var mount = document.querySelector("[data-include='footer']");
     if (!mount) return;
 
-    fetch(withRoot("includes/footer.html?v=11"))
+    fetch(withRoot("includes/footer.html?v=12"))
       .then(function (response) {
         if (!response.ok) throw new Error("Footer include failed");
         return response.text();
@@ -640,7 +640,7 @@
   var CONTACT_INBOX = "contact@terranovastrategy.com";
   var TOPIC_LABELS = {
     exposure: "Territorial Exposure Assessment",
-    response: "Operational Disruption Response",
+    response: "Crisis Management and Business Continuity",
     recovery: "Strategic Territorial Recovery",
     general: "General enquiry"
   };
@@ -772,7 +772,7 @@
      --------------------------------------------- */
 
   function isContactHref(href) {
-    return Boolean(href) && /contact\.html(?:[?#]|$)/.test(href);
+    return Boolean(href) && /(?:^|\/)contact(?:\.html)?(?:[?#]|$)/.test(href);
   }
 
   function isContactCta(link) {
@@ -815,7 +815,7 @@
             '<select class="field" id="contact-popup-topic" name="topic" required>' +
               '<option value="">Select…</option>' +
               '<option value="exposure">Territorial Exposure Assessment</option>' +
-              '<option value="response">Operational Disruption Response</option>' +
+              '<option value="response">Crisis Management and Business Continuity</option>' +
               '<option value="recovery">Strategic Territorial Recovery</option>' +
             "</select>" +
           "</div>" +

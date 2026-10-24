@@ -89,7 +89,7 @@ window.PS_STUDIES = [
     id: "facility-relocation",
     title: "When relocation becomes the rational response",
     category: "response",
-    service: "Operational Disruption Response",
+    service: "Crisis Management and Business Continuity",
     year: 2025,
     date: "2025-11-15",
     caption: "Facility relocation",

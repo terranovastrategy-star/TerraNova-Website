@@ -518,7 +518,7 @@ body:has(.hero) .site-header:not(.is-scrolled):not(.is-nav-open) .logo__img--lig
   animation: hero-enter var(--motion-reveal) var(--ease-out) 0.04s both;
 }
 
-.hero__content h2 {
+.hero__eyebrow {
   margin-bottom: 1.35rem;
   font-size: 0.68rem;
   font-weight: 500;
@@ -8797,7 +8797,7 @@ body:has(.offer-page) .site-header {
   background-color: var(--color-accent);
 }
 
-.hero__content h2 {
+.hero__eyebrow {
   color: #fff;
 }
 

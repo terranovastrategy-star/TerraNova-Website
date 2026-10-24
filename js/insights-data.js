@@ -6,7 +6,8 @@
  *   2. Fill title, deck, category, date, heroImage
  *   3. Add a short intro and a few sections (layout controls rhythm)
  *   4. Add a brief conclusion, relatedService, optional relatedArticles
- *   5. Save this file. Do not edit HTML or CSS for a single article.
+ *   5. Save this file, then run: node js/build-insights-html.js
+ *      That writes the article text and the listing links into the HTML.
  *
  * LAYOUTS
  *   text | text-image | image-text | full-image | two-images |
@@ -23,7 +24,7 @@ window.PS_SERVICES = {
   },
   response: {
     id: "response",
-    title: "Operational Disruption Response",
+    title: "Crisis Management and Business Continuity",
     url: "disruption-response.html",
   },
   recovery: {
@@ -114,6 +115,8 @@ window.PS_INSIGHTS = [
     title: "How can climate-related events affect supply chain management?",
     deck: "Floods, storms, fire and drought do not hit a spreadsheet. They close the warehouses, corridors, suppliers and plants the chain actually runs through.",
     excerpt: "Climate-related events affect supply chains at the joints: lost access to sites, forced rerouting of critical goods, suppliers that cannot ship, and manufacturing that slows or stops.",
+    metaTitle: "Climate events and supply chain management",
+    metaDescription: "Floods, storms and drought close the warehouses, corridors, suppliers and plants a supply chain actually runs through.",
     date: "2026-10-21",
     updated: "2026-10-21",
     readingTime: 4,
@@ -130,6 +133,7 @@ window.PS_INSIGHTS = [
     globalRelevance: 0.92,
     editorialRelevance: 0.96,
     featured: true,
+    listingLead: true,
     intro: "Climate-related events are the physical shocks a changing climate makes more frequent, more intense, or both: too much water, too little water, heat, wind, fire. For a supply chain they are not a sustainability footnote. They are the week the warehouse cannot be reached, the supplier cannot ship, and the plant cannot run.",
     sections: [
       {
@@ -195,6 +199,7 @@ window.PS_INSIGHTS = [
     title: "Mont Blanc can no longer be sold in August",
     deck: "This summer all three routes closed. The valley is a €1.4 billion machine. The face is writing the calendar.",
     excerpt: "Rockfall and thawing permafrost took the summit off the summer brochure. The towns under Mont Blanc still sell one peak, in the hottest month. That is a territorial mistake.",
+    metaDescription: "Rockfall and thawing permafrost took the summit off the summer brochure. The towns below still sell August.",
     date: "2026-09-25",
     updated: "2026-09-25",
     readingTime: 4,
@@ -265,6 +270,7 @@ window.PS_INSIGHTS = [
     title: "How the 2024 Valencia flood stopped a working region",
     deck: "A flash flood closed the metropolitan south. The fiscal bill is about €12 billion. Paying claims is not the same as putting the territory back to work.",
     excerpt: "Two years on, Valencia has paid most of the insurance bill and got industrial parks running again. The works that would change the next flood are still waiting.",
+    metaDescription: "Two years on, Valencia has reopened its industrial parks. The works that would change the next flood are still waiting.",
     date: "2026-10-29",
     updated: "2026-10-29",
     readingTime: 5,
@@ -330,7 +336,7 @@ window.PS_INSIGHTS = [
     },
     relatedService: {
       id: "recovery",
-      note: "Strategic Territorial Recovery sequences reconstruction by what unlocks the territory — access, parks, housing, then the works that change the next flood — so a paid claim is not mistaken for a region back in business. Territorial Exposure Assessment would have shown that occupancy on the ravine before the water. Operational Disruption Response would have treated the closed motorway, the port and the parks as one event.",
+      note: "Strategic Territorial Recovery sequences reconstruction by what unlocks the territory — access, parks, housing, then the works that change the next flood — so a paid claim is not mistaken for a region back in business. Territorial Exposure Assessment would have shown that occupancy on the ravine before the water. Crisis Management and Business Continuity would have treated the closed motorway, the port and the parks as one event.",
     },
     relatedArticles: ["colombia-earthquake-operational-disruption", "wildfire-risk-southern-europe"],
   },
@@ -341,6 +347,7 @@ window.PS_INSIGHTS = [
     title: "How the Colombia earthquake blocked the Pacific corridor",
     deck: "The 7.4 shock of 10 August closed 521 roads, more than a hundred bridges and the land approach to Buenaventura. Firms stopped because cargo could not move.",
     excerpt: "Western Colombia did not only lose buildings. It lost the corridors that feed the Coffee Axis and the Pacific port — and with them the operations that sit inland.",
+    metaDescription: "Western Colombia lost the corridors that feed the Coffee Axis and the Pacific port, and the operations that sit inland.",
     date: "2026-09-18",
     updated: "2026-09-18",
     readingTime: 5,
@@ -404,7 +411,7 @@ window.PS_INSIGHTS = [
     },
     relatedService: {
       id: "response",
-      note: "Operational Disruption Response treats a closed mountain corridor, a suspended terminal and an inland plant as one event — so the substitute route is named before the next shock.",
+      note: "Crisis Management and Business Continuity treats a closed mountain corridor, a suspended terminal and an inland plant as one event — so the substitute route is named before the next shock.",
     },
     relatedArticles: ["danube-rhine-low-water-cost-central-europe", "geography-of-global-supply-chains"],
   },
@@ -415,6 +422,8 @@ window.PS_INSIGHTS = [
     title: "The lower levels of the Danube and the Rhine have cost €5 billion to Central Europe",
     deck: "Low water is a closed corridor: barges at a fraction of load, reactors that cannot cool, plants that cannot be fed.",
     excerpt: "A severe low-water season on the Rhine and the Danube has a valued industrial bill of about €5 billion. In 2026 that bill is being paid again — in freight, energy and the factories that sit on both rivers.",
+    metaTitle: "Danube and Rhine low water cost €5 billion",
+    metaDescription: "A severe low-water season on the Rhine and the Danube carries an industrial bill of about €5 billion, paid again in 2026.",
     date: "2026-09-18",
     updated: "2026-09-18",
     readingTime: 5,
@@ -494,6 +503,7 @@ window.PS_INSIGHTS = [
     title: "How rising temperatures are economically impacting business in the Alps",
     deck: "Heat arrives as insured loss, closed lifts and red zones. The operating year is already being repriced.",
     excerpt: "Alpine warming is no longer only a hazard story. It is showing up in destroyed villages, suspended ascents, ski-lift repairs and towns that cannot rebuild.",
+    metaTitle: "Rising temperatures and Alpine business",
     date: "2026-09-17",
     updated: "2026-09-17",
     readingTime: 5,
@@ -570,6 +580,7 @@ window.PS_INSIGHTS = [
     title: "What does Permafrost exposure risk mean for alpine regions?",
     deck: "Thawing ground in the high Alps does not stay on the summit. It arrives in the valley as rockfall, debris flow and closed corridors.",
     excerpt: "Alpine permafrost is mostly invisible, and it is warming. The operational question is not the temperature of the peak. It is which valleys, crossings and settlements sit in the path of the cascade.",
+    metaDescription: "Alpine permafrost is warming out of sight. The question is which valleys, crossings and settlements sit in the path.",
     date: "2026-09-17",
     updated: "2026-09-18",
     readingTime: 3,
@@ -637,6 +648,7 @@ window.PS_INSIGHTS = [
     title: "What does wildfire exposure mean for southern Europe?",
     deck: "The 2026 season closed farms, timber, motorways and industrial belts. Fire is no longer only a Mediterranean rural event.",
     excerpt: "Wildfire in southern Europe is a territorial operating condition. The 2026 season showed which land, corridors and cities sit inside the fire — not only how many hectares burned.",
+    metaDescription: "Wildfire in southern Europe is an operating condition: which land, corridors and cities sit inside the fire.",
     date: "2026-09-18",
     updated: "2026-09-18",
     readingTime: 5,

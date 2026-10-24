@@ -1,0 +1,17 @@
+# Preferred public URLs are extensionless. Specific rules come first.
+/index.html                     /                       301
+/about.html                     /about                  301
+/exposure-assessment.html       /exposure-assessment    301
+/disruption-response.html       /disruption-response    301
+/territorial-recovery.html      /territorial-recovery   301
+/insights.html                  /insights               301
+/contact.html                   /contact                301
+/privacy.html                   /privacy                301
+/legal.html                     /legal                  301
+/studies.html                   /insights               301
+/studies/_template.html         /insights               301
+/studies/_template              /insights               301
+/studies/flood-exposure.html    /studies/flood-exposure 301
+/insights/flood-exposure-beyond-the-hazard-map.html  /studies/flood-exposure  301
+/insights/flood-exposure-beyond-the-hazard-map       /studies/flood-exposure  301
+/insights/:slug.html            /insights/:slug         301
