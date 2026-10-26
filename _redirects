@@ -5,6 +5,8 @@
 /disruption-response.html       /disruption-response    301
 /territorial-recovery.html      /territorial-recovery   301
 /insights.html                  /insights               301
+/insights/                      /insights               301
+/studies/                       /insights               301
 /contact.html                   /contact                301
 /privacy.html                   /privacy                301
 /legal.html                     /legal                  301

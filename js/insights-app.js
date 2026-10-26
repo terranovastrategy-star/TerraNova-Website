@@ -337,7 +337,7 @@
   }
 
   function articleUrl(insight) {
-    return withRoot(insightFile(insight.slug));
+    return "/insights/" + encodeURIComponent(insight.slug);
   }
 
   function documentTitle(article) {
@@ -741,14 +741,14 @@
       render();
     });
 
-    ranked = [];
-    if (loading) loading.hidden = false;
+    ranked = sortByRank(publishedInsights(), locationFromTimezone() || { country: null, region: null, source: "none" });
+    if (loading) loading.hidden = true;
+    page.classList.remove("is-waiting");
+    render();
 
     detectLocation().then(function (loc) {
       location = loc || location;
       ranked = sortByRank(publishedInsights(), location);
-      if (loading) loading.hidden = true;
-      page.classList.remove("is-waiting");
       render();
     });
   }

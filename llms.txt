@@ -14,6 +14,21 @@ The commercial offer is three services. Related fields (climate resilience, terr
 - [Insights](https://terranovastrategy.com/insights) — research and perspectives on territorial intelligence, risk, resilience and recovery
 - [Contact](https://terranovastrategy.com/contact)
 
+The insights index lists every published article. Open that page, then each article below. The article text is in the HTML.
+
+## Insights
+
+- [The hidden territorial dependencies of business continuity](https://terranovastrategy.com/insights/territorial-dependencies-business-continuity) — 9 October 2026. A site can stay intact and still stop when the road, power, water, suppliers or logistics around it fail.
+- [How can climate-related events affect supply chain management?](https://terranovastrategy.com/insights/climate-related-events-supply-chain-management) — 21 October 2026. Floods, storms and drought close the warehouses, corridors, suppliers and plants a supply chain runs through.
+- [Mont Blanc can no longer be sold in August](https://terranovastrategy.com/insights/mont-blanc-summer-2026-territorial-economy) — 25 September 2026. Rockfall and thawing permafrost took the summit off the summer season. The valley economy is still sold as if the peak were open.
+- [How the 2024 Valencia flood stopped a working region](https://terranovastrategy.com/insights/valencia-flood-2024-territorial-recovery) — 29 October 2026. Industrial parks are running again. The works that would change the next flood are still waiting.
+- [How the Colombia earthquake blocked the Pacific corridor](https://terranovastrategy.com/insights/colombia-earthquake-operational-disruption) — 18 September 2026. The earthquake cut the corridors that feed the Coffee Axis and the Pacific port, and the operations inland of them.
+- [The lower levels of the Danube and the Rhine have cost €5 billion to Central Europe](https://terranovastrategy.com/insights/danube-rhine-low-water-cost-central-europe) — 18 September 2026. A severe low-water season on the two rivers carries an industrial bill of about €5 billion.
+- [How rising temperatures are economically impacting business in the Alps](https://terranovastrategy.com/insights/rising-temperatures-economic-impact-alpine-business) — 17 September 2026. Alpine warming is already in destroyed villages, closed ascents, ski-lift repairs and towns that cannot rebuild.
+- [What does Permafrost exposure risk mean for alpine regions?](https://terranovastrategy.com/insights/permafrost-exposure-risk-alpine-regions) — 17 September 2026. The question is which valleys, crossings and settlements sit in the path of thawing ground.
+- [What does wildfire exposure mean for southern Europe?](https://terranovastrategy.com/insights/wildfire-risk-southern-europe) — 18 September 2026. The 2026 season showed which land, corridors and cities sit inside the fire.
+- [The changing geography of global supply chains](https://terranovastrategy.com/insights/geography-of-global-supply-chains) — 3 June 2026. Supply chains run through territories that flood, congest, close and get politicised.
+
 Full URL list: https://terranovastrategy.com/sitemap.xml
 
 ## Location
