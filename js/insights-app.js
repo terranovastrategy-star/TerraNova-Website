@@ -1142,12 +1142,14 @@
     }
     var slug = params.get("slug") || page.dataset.insightId || "";
     if (!slug) {
-      var last = path.split("/").filter(Boolean).pop() || "";
-      last = decodeURIComponent(last.replace(/\.html$/i, ""));
+      var parts = path.split("/").filter(Boolean);
+      var last = decodeURIComponent((parts.pop() || "").replace(/\.html$/i, ""));
+      if (last === "index") last = decodeURIComponent(parts.pop() || "");
       if (last && last !== "article" && last !== "insights") slug = last;
     }
     var loading = page.querySelector("[data-article-loading]");
     var missing = page.querySelector("[data-article-missing]");
+    var hasStatic = page.querySelector("[data-article-root] .ed-frame");
 
     var article = publishedInsights().filter(function (item) {
       return item.slug === slug;
@@ -1155,7 +1157,7 @@
 
     if (!article) {
       if (loading) loading.hidden = true;
-      if (missing) missing.hidden = false;
+      if (missing && !hasStatic) missing.hidden = false;
       return;
     }
 
