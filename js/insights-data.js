@@ -20,17 +20,17 @@ window.PS_SERVICES = {
   exposure: {
     id: "exposure",
     title: "Territorial Exposure Assessment",
-    url: "exposure-assessment.html",
+    url: "/exposure-assessment",
   },
   response: {
     id: "response",
     title: "Crisis Management and Business Continuity",
-    url: "disruption-response.html",
+    url: "/disruption-response",
   },
   recovery: {
     id: "recovery",
     title: "Strategic Territorial Recovery",
-    url: "territorial-recovery.html",
+    url: "/territorial-recovery",
   },
 };
 

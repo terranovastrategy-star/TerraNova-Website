@@ -1,4 +1,5 @@
 # Preferred public URLs are extensionless. Specific rules come first.
+https://www.terranovastrategy.com/*  https://terranovastrategy.com/:splat  301
 /index.html                     /                       301
 /about.html                     /about                  301
 /exposure-assessment.html       /exposure-assessment    301

@@ -863,7 +863,7 @@
           '<div class="home-contact__actions">' +
             '<label class="contact-form__consent">' +
               '<input type="checkbox" id="article-contact-privacy" name="privacy" required>' +
-              '<span>I have read the <a href="' + withRoot("privacy.html") + '">Privacy Policy</a>. <span class="contact-form__req" aria-hidden="true">*</span></span>' +
+              '<span>I have read the <a href="/privacy">Privacy Policy</a>. <span class="contact-form__req" aria-hidden="true">*</span></span>' +
             "</label>" +
             '<button type="submit" class="contact-form__submit">Submit</button>' +
           "</div>" +
@@ -1011,7 +1011,7 @@
 
     var crumb = document.createElement("p");
     crumb.className = "breadcrumb";
-    crumb.innerHTML = '<a href="' + withRoot("index.html") + '">Home</a> / <a href="' + withRoot("insights.html") + '">Insights</a>';
+    crumb.innerHTML = '<a href="/">Home</a> / <a href="/insights">Insights</a>';
 
     var kicker = document.createElement("p");
     kicker.className = "ed-kicker";
