@@ -1,12 +1,12 @@
 # Preferred public URLs are extensionless. Specific rules come first.
-https://www.terranovastrategy.com/*  https://terranovastrategy.com/:splat  301
+# Host redirects such as www to the apex belong in Cloudflare Redirect Rules.
+# This file only accepts relative paths.
 /index.html                     /                       301
 /about.html                     /about                  301
 /exposure-assessment.html       /exposure-assessment    301
 /disruption-response.html       /disruption-response    301
 /territorial-recovery.html      /territorial-recovery   301
 /insights.html                  /insights               301
-/insights/                      /insights               301
 /studies/                       /insights               301
 /contact.html                   /contact                301
 /privacy.html                   /privacy                301
