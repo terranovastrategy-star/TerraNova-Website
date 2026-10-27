@@ -7,6 +7,12 @@
      Service hero images (shared with homepage)
      --------------------------------------------- */
 
+  function assetUrl(path) {
+    var root = (document.body && document.body.dataset.root) || "";
+    if (!path || /^(https?:|\/|mailto:|tel:|#)/.test(path)) return path;
+    return root + path;
+  }
+
   function applyServiceImages() {
     const config = window.PS_SERVICE_IMAGES;
     if (!config) return;
@@ -16,7 +22,7 @@
       const data = config[servicePage.dataset.service];
       const heroImg = servicePage.querySelector(".offer-hero__media img, .service-hero__media img");
       if (data && heroImg) {
-        heroImg.src = data.src;
+        heroImg.src = assetUrl(data.src);
         heroImg.alt = data.alt;
         heroImg.decoding = "async";
         heroImg.setAttribute("fetchpriority", "high");
@@ -27,7 +33,7 @@
       const data = config[card.dataset.service];
       const img = card.querySelector(".service-card__image");
       if (data && img) {
-        img.src = data.src;
+        img.src = assetUrl(data.src);
         img.alt = data.alt;
         img.decoding = "async";
         img.loading = "lazy";
