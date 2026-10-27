@@ -243,6 +243,17 @@ function prefixAttrs(html, prefix) {
   });
 }
 
+function publishCopy(html, urlPrefix, dataRoot) {
+  let next = prefixAttrs(html, urlPrefix);
+  const root = dataRoot || urlPrefix;
+  if (next.includes("data-root=")) {
+    next = next.replace(/data-root="[^"]*"/, 'data-root="' + root + '"');
+  } else {
+    next = next.replace("<body>", '<body data-root="' + root + '">');
+  }
+  return next;
+}
+
 function fillMarked(html, marker, content) {
   const start = "<!--" + marker + "-->";
   const end = "<!--/" + marker + "-->";
@@ -303,13 +314,30 @@ if (listing.includes('"@type": "ItemList"')) {
 
 fs.writeFileSync(path.join(root, "insights.html"), listing);
 fs.mkdirSync(path.join(root, "insights"), { recursive: true });
-fs.writeFileSync(path.join(root, "insights", "index.html"), prefixAttrs(listing, "../"));
+fs.writeFileSync(path.join(root, "insights", "index.html"), publishCopy(listing, "../", "../"));
 
 for (const article of insights) {
   const file = path.join(root, "insights", article.slug + ".html");
   const prettyDir = path.join(root, "insights", article.slug);
   fs.mkdirSync(prettyDir, { recursive: true });
-  fs.writeFileSync(path.join(prettyDir, "index.html"), prefixAttrs(fs.readFileSync(file, "utf8"), "../"));
+  fs.writeFileSync(path.join(prettyDir, "index.html"), publishCopy(fs.readFileSync(file, "utf8"), "../", "../../"));
+}
+
+const staticPages = [
+  ["about.html", "about/index.html", "../"],
+  ["contact.html", "contact/index.html", "../"],
+  ["exposure-assessment.html", "exposure-assessment/index.html", "../"],
+  ["disruption-response.html", "disruption-response/index.html", "../"],
+  ["territorial-recovery.html", "territorial-recovery/index.html", "../"],
+  ["privacy.html", "privacy/index.html", "../"],
+  ["legal.html", "legal/index.html", "../"],
+  ["studies/flood-exposure.html", "studies/flood-exposure/index.html", "../../"],
+];
+
+for (const [source, dest, dataRoot] of staticPages) {
+  const target = path.join(root, dest);
+  fs.mkdirSync(path.dirname(target), { recursive: true });
+  fs.writeFileSync(target, publishCopy(fs.readFileSync(path.join(root, source), "utf8"), "../", dataRoot));
 }
 
 const footerFile = fs.readFileSync(path.join(root, "includes", "footer.html"), "utf8");

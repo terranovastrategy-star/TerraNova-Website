@@ -765,6 +765,7 @@
 
   bindContactForm(document.getElementById("contact-form"), { source: "Contact page" });
   bindContactForm(document.getElementById("home-contact-form"), { source: "Homepage" });
+  bindContactForm(document.getElementById("about-contact-form"), { source: "About page" });
   bindContactForm(document.getElementById("article-contact-form"), { source: "Insights article" });
 
   /* ---------------------------------------------

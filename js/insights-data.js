@@ -193,77 +193,6 @@ window.PS_INSIGHTS = [
     relatedArticles: ["geography-of-global-supply-chains", "territorial-dependencies-business-continuity"],
   },
   {
-    slug: "mont-blanc-summer-2026-territorial-economy",
-    articleType: "insight",
-    category: "territorial-risk",
-    title: "Mont Blanc can no longer be sold in August",
-    deck: "This summer all three routes closed. The valley is a €1.4 billion machine. The face is writing the calendar.",
-    excerpt: "Rockfall and thawing permafrost took the summit off the summer brochure. The towns under Mont Blanc still sell one peak, in the hottest month. That is a territorial mistake.",
-    metaDescription: "Rockfall and thawing permafrost took the summit off the summer brochure. The towns below still sell August.",
-    date: "2026-09-25",
-    updated: "2026-09-25",
-    readingTime: 4,
-    author: { name: "Terranova Strategy", role: "Territorial strategy" },
-    heroImage: {
-      src: "assets/images/Mont%20Blanc%20Aiguille%20du%20Midi.jpg",
-      alt: "Aiguille du Midi cable-car station on the rock pyramid above Chamonix, with a cabin on the line",
-      caption: "The cable sells the summit. This summer the face could not hold it.",
-    },
-    countries: ["FR", "IT"],
-    regions: ["Europe"],
-    topics: ["Climate Risk", "Territorial Exposure", "Strategic Recovery", "Operational Resilience"],
-    global: false,
-    globalRelevance: 0.55,
-    editorialRelevance: 0.95,
-    featured: true,
-    intro: "The towns under Mont Blanc sell one thing the rest of the Alps cannot copy: the highest ground. This summer the ground refused. Five heatwaves stored heat in the permafrost. The ice that holds the faces together loosened. Rock fell. The three principal routes were unusable at the same time. That is not a mountain-sports incident. It is a regional economy discovering that its brand sits on a thawing wall.",
-    sections: [
-      {
-        title: "What the face withdrew",
-        layout: "text",
-        text: [
-          "The binder is permafrost. Ludovic Ravanel’s boreholes at the Aiguille du Midi show the rock at the heart of the massif has warmed by 1 to 1.5°C in a decade. The ice in the cracks no longer holds. Between 2007 and 2024 the massif recorded about 2,500 rockfalls of more than 100 cubic metres. This summer the Chamonix mayor, François-Xavier Laffin, put the worst days at about ten of those falls a day. On 12 August some 15,000 cubic metres came off the north face of the Aiguille du Midi — beside the cable that takes on the order of 500,000 visitors a year.",
-          "The Italian normal route was already unusable from 15 July. Alex Campedelli, of the Courmayeur guides, was blunt: the glacier was too crevassed to take clients. French companies suspended the summit. On 11 August Jean-Marc Peillex, mayor of Saint-Gervais, closed the Goûter and Tête Rousse refuges. He cannot close the mountain by decree — he would have to prove the risk had gone. So he closes the huts. Fourth time. His line: the mountain dictates the rules. On reopening, 26 August, he said the massif had stored unprecedented heat, and that the reasonable act is to climb when it is cooler.",
-        ],
-      },
-      {
-        title: "The money sits in the valley",
-        layout: "text",
-        text: [
-          "No official season-loss total has been published. The scale of what was interrupted has. The Chamonix valley is a €1.4 billion tourism economy and about 8,400 jobs. Summer is no longer the junior season: 4.5 million of 8.6 million nights. That summer spend has supported about 3,500 jobs. The Compagnie du Mont-Blanc turns over about €156 million and employs about 400 people in summer.",
-          "The product that stopped is narrower and more expensive. Five-day Mont Blanc programmes sell at €2,400 to €3,800 a head. The Goûter holds 120 beds, Tête Rousse 72: about 2,900 high-mountain nights removed in two August weeks. Courmayeur had already lost the Italian route for six weeks of high season. Companies can send a rope to Gran Paradiso or Monte Rosa. The independent guide whose client came for the roof of the Alps cannot. A town that sits under a single summit discovers it has no second product.",
-        ],
-      },
-      {
-        layout: "key-thought",
-        quote: "A valley that sells one summit in the hottest month is not a destination. It is a single point of failure.",
-      },
-      {
-        title: "Move the summit",
-        layout: "text",
-        text: "Peillex has already said the quiet part: climb when it is cooler. Write that into the calendar. High alpinism belongs in late spring and early autumn. July and August stay open — as hiking, cycling, thermal, via ferrata, the Midi as a viewpoint. Ninety percent of that cable’s traffic is already contemplative. The 4,000er is the part of the brochure the heat is deleting. Keeping it in August is not authenticity. It is a refusal to read the face.",
-        image: {
-          src: "assets/graphics/mont-blanc-deseasonalisation.png",
-          alt: "Chart moving high alpinism out of July and August into spring and autumn, while valley leisure stays through summer",
-          caption: "The heat window is July and August. That is when the valley still has a summer to sell — if the summit is not the product.",
-        },
-      },
-      {
-        title: "A massif is not one town",
-        layout: "text",
-        text: "Do not wait for the Goûter to be safe in August. It will not be, not as a planning assumption. Recover the economy by changing what the territory sells, and where. Les Contamines, Saint-Gervais, Courmayeur, La Thuile, the Val Ferret, Gran Paradiso, Monte Rosa are not overflow car parks. They are the alternative routes and the alternative towns. That means beds, guide desks, mid-station lifts and a professional network that can reroute a rope in a day. Treat Chamonix as the capital of a massif, not the only cash register. Laffin is right that the commune is not ordinary. He is wrong if regulating crowds is the whole strategy. The hazard is not only too many people. It is too many people on the same face, in the same fortnight, on a binder that is melting. Authenticity, for this brand, is to stop promising a July summit it can no longer deliver — and to start selling a region that still works.",
-      },
-    ],
-    conclusion: {
-      text: "The 2026 summer was the mountain editing the brochure. The next season is a planning choice: one peak in the hottest month, or a massif with a calendar that can still be kept.",
-    },
-    relatedService: {
-      id: "recovery",
-      note: "Strategic Territorial Recovery sequences a mountain economy the way a closed route should be sequenced: what the valley can still sell this summer, which towns take the overflow, and which peaks become the shoulder-season product — so a thawing face is not mistaken for the end of the region.",
-    },
-    relatedArticles: ["rising-temperatures-economic-impact-alpine-business", "permafrost-exposure-risk-alpine-regions"],
-  },
-  {
     slug: "valencia-flood-2024-territorial-recovery",
     articleType: "insight",
     category: "natural-hazards",
@@ -494,84 +423,7 @@ window.PS_INSIGHTS = [
       id: "exposure",
       note: "Territorial Exposure Assessment places river gauges, energy cooling, inland freight and the plants they feed in the same territorial picture.",
     },
-    relatedArticles: ["rising-temperatures-economic-impact-alpine-business", "wildfire-risk-southern-europe"],
-  },
-  {
-    slug: "rising-temperatures-economic-impact-alpine-business",
-    articleType: "insight",
-    category: "territorial-risk",
-    title: "How rising temperatures are economically impacting business in the Alps",
-    deck: "Heat arrives as insured loss, closed lifts and red zones. The operating year is already being repriced.",
-    excerpt: "Alpine warming is no longer only a hazard story. It is showing up in destroyed villages, suspended ascents, ski-lift repairs and towns that cannot rebuild.",
-    metaTitle: "Rising temperatures and Alpine business",
-    date: "2026-09-17",
-    updated: "2026-09-17",
-    readingTime: 5,
-    author: { name: "Terranova Strategy", role: "Territorial strategy" },
-    heroImage: {
-      src: "assets/images/Swiss%20Manufcaturing%20Exposure%201.jpg",
-      alt: "Manufacturing plant, railway and settlement in an Alpine valley with high peaks beyond",
-      caption: "The slope fails at elevation. The bill is paid on the valley floor, where the operation actually sits.",
-    },
-    countries: ["CH", "AT", "IT", "FR", "DE"],
-    regions: ["Europe"],
-    topics: ["Climate Risk", "Territorial Exposure", "Infrastructure", "Operational Resilience"],
-    global: false,
-    globalRelevance: 0.58,
-    editorialRelevance: 0.93,
-    featured: true,
-    intro: "Rising temperatures in the European Alps are no longer a background climate trend. They are being booked as reconstruction, business interruption, stranded beds and seasons that cannot be sold. The physics is thawing permafrost, rockfall and debris flow. The P&L is buildings, lifts, guides and hotels.",
-    sections: [
-      {
-        title: "The losses already on the books",
-        layout: "text-image",
-        text: [
-          "When a high slope fails, the invoice is issued in the valley. The 2025 Birch glacier collapse above Blatten in Valais produced about CHF 255 million in insured loss, of which about CHF 210 million was buildings. An earlier estimate put business interruption and vehicles at a further tens of millions. The village was largely destroyed. That is a territorial event with a corporate and municipal balance sheet.",
-          "The 2017 Piz Cengalo–Bondo cascade in Graubünden damaged 99 buildings, a third of them destroyed, at about CHF 41 million. Eight people died. The municipality of Bregaglia faced around CHF 20 million in infrastructure and emergency costs before reconstruction was finished. Fluchthorn in Tyrol in 2023 and Piz Scerscen in 2024 have not yet produced comparable published loss totals. They show the same process chain moving east along the arc.",
-          "Kandersteg has not had a Blatten. It is already paying. Canton and commune have spent about CHF 11 million on dams, nets and monitoring below the Spitze Stei. A building ban covers much of the village. Five applications worth about CHF 3.5 million were rejected in a single round. If the temporary red zone becomes the hazard map, the commune estimates that 60% of hotel beds would sit inside it. The mayor’s phrase was economic collapse of a tourism destination — without the mountain having fallen.",
-        ],
-        image: {
-          src: "assets/images/territorial-disruption.jpg",
-          alt: "Settlement and river valley severely affected by a destructive debris flow",
-          caption: "A high-elevation failure is paid for as buildings, interruption and a valley that cannot be used as before.",
-        },
-      },
-      {
-        title: "Mont Blanc, summer 2026",
-        layout: "text",
-        text: [
-          "Chamonix and Courmayeur sell access to the highest ground in the Alps. In summer 2026 that access was interrupted by heat. Around 450 significant rockfalls were expected in the Mont Blanc massif. On 12 August a collapse of about 15,000 m³ came off the north face of the Aiguille du Midi, close to the cable-car alignment. The Compagnie du Mont-Blanc ordered a geotechnical inspection. The ice tunnel used by mountaineers to reach the ridge had already been closed. The mayor of Saint-Gervais shut the Goûter and Tête Rousse refuges on the normal route. Guides on the Chamonix–Saint-Gervais side, and on the Courmayeur side, suspended ascents.",
-          "A published loss total for the 2026 season is not yet available. The scale of the corridor is. The Aiguille du Midi takes on the order of 500,000 visitors a year. The Compagnie du Mont-Blanc turns over about €156 million, with summer sites a growing share of that figure. French Alpine ski resorts support about 105,000 jobs. The cancelled product is not only a summit. It is guiding days, refuge nights, lift tickets and the hotels that sit under a massif that no longer behaves as the brochure assumed.",
-        ],
-      },
-      {
-        title: "The slow bill on the high ground",
-        layout: "text",
-        text: [
-          "Most Alpine businesses will not be buried. They will be repaired, rerouted or restricted. French inventories place about 1,000 infrastructure elements on modelled permafrost, and 1,769 in permafrost or glacier-retreat terrain. Three-quarters are ski lifts. About 10% already carry a high destabilisation score. Recorded damage cases doubled between 2010 and 2018 relative to the previous decade. The concentration is in the Vanoise, Écrins–Oisans and Mont Blanc — Val Thorens, Tignes, Val d’Isère, La Plagne, Les Arcs, Les Deux Alpes, Alpe d’Huez, La Grave and Chamonix.",
-          "In Switzerland, about 15% of mountain-railway installations — 288 of 1,894 in the last national count — are anchored in permafrost. More than a third of the Swiss Alpine Club’s 152 huts are judged endangered by thaw; another 42 sit under landslide runout from permafrost slopes. Climate-related hut works are estimated at CHF 5–7 million a year through 2040, more than CHF 100 million in total. A replacement hut now costs CHF 4–5 million. That is not catastrophe insurance. It is capex that used to be optional.",
-        ],
-      },
-      {
-        layout: "key-thought",
-        quote: "Heat arrives in the accounts as closed lifts, red zones and cancelled seasons — long before it appears as a climate line in the annual report.",
-      },
-      {
-        title: "What the forecasts say about places not yet hit",
-        layout: "text",
-        text: [
-          "There is no Alps-wide forecast of permafrost-related business loss. The local ones describe valleys that are still open. In the Dorfbach torrent in Valais, warming and thaw alone are projected to raise modelled risk costs by 238%. Nine in ten French high-mountain installations have not yet been scored as high risk — and even the high-risk tenth has mostly not failed. Kandersteg’s 60% of hotel beds sit in a zone that could close the destination without the mountain falling. The next invoice is waiting in catchments and resorts that still look open.",
-        ],
-      },
-    ],
-    conclusion: {
-      text: "The economic impact of rising Alpine temperatures is already visible in two ledgers: the catastrophic one, paid after Blatten and Bondo, and the operating one, paid in inspections, red zones and seasons that cannot be delivered. Exposure assessment that stops at the last event will miss the second ledger — which is where most Alpine businesses actually sit.",
-    },
-    relatedService: {
-      id: "exposure",
-      note: "Territorial Exposure Assessment places slope, torrent and access hazards with the operations, assets and seasons they can take off the books.",
-    },
-    relatedArticles: ["mont-blanc-summer-2026-territorial-economy", "permafrost-exposure-risk-alpine-regions"],
+    relatedArticles: ["permafrost-exposure-risk-alpine-regions", "wildfire-risk-southern-europe"],
   },
   {
     slug: "permafrost-exposure-risk-alpine-regions",
@@ -639,7 +491,7 @@ window.PS_INSIGHTS = [
       id: "exposure",
       note: "Territorial Exposure Assessment places permafrost-related slope and torrent hazards with the access, energy and settlement dependencies they can close.",
     },
-    relatedArticles: ["rising-temperatures-economic-impact-alpine-business", "wildfire-risk-southern-europe"],
+    relatedArticles: ["danube-rhine-low-water-cost-central-europe", "wildfire-risk-southern-europe"],
   },
   {
     slug: "wildfire-risk-southern-europe",
@@ -707,7 +559,7 @@ window.PS_INSIGHTS = [
       id: "exposure",
       note: "Territorial Exposure Assessment places fire, farmland, access and industrial belts in the same territorial picture — so a closed corridor is visible before the next season.",
     },
-    relatedArticles: ["rising-temperatures-economic-impact-alpine-business", "permafrost-exposure-risk-alpine-regions"],
+    relatedArticles: ["danube-rhine-low-water-cost-central-europe", "permafrost-exposure-risk-alpine-regions"],
   },
   {
     slug: "geography-of-global-supply-chains",
